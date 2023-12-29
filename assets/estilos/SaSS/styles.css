@@ -188,6 +188,16 @@ $fam_05: 'Staatliches', sans-serif;
     } 
 }
 */
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(../../fuentes/BebasNeue-Regular.woff) format("woff");
+  font-display: auto;
+}
+@font-face {
+  font-family: "Antonio", sans-serif;
+  src: url(../../fuentes/Antonio-VariableFont_wght.woff) format("woff");
+  font-display: auto;
+}
 /*
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -223,16 +233,6 @@ $fam_05: 'Staatliches', sans-serif;
     font-display: auto;
 }
 */
-@font-face {
-  font-family: "Bebas Neue";
-  src: url(../../fuentes/BebasNeue-Regular.woff) format("woff");
-  font-display: auto;
-}
-@font-face {
-  font-family: "Antonio", sans-serif;
-  src: url(../../fuentes/Antonio-VariableFont_wght.woff) format("woff");
-  font-display: auto;
-}
 html,
 :root {
   font-size: 16px !important;
@@ -267,20 +267,22 @@ a {
   color: inherit;
 }
 
+h1 {
+  font-size: 9svw;
+  text-transform: uppercase;
+  color: #000;
+}
+
 .h1__01 {
   font-family: "Antonio", sans-serif;
   font-size: 12svw;
   font-weight: 100;
-  color: #000;
-  text-transform: uppercase;
 }
 
 .h1__02 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 14.1svw;
   font-weight: 900;
-  color: #000;
-  text-transform: uppercase;
 }
 
 #contenedor {
