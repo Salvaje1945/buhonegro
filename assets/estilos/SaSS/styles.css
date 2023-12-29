@@ -1,13 +1,4 @@
-@font-face {
-  font-family: "Bebas Neue";
-  src: url(../../fuentes/BebasNeue-Regular.woff) format("woff");
-  font-display: auto;
-}
-@font-face {
-  font-family: "Antonio", sans-serif;
-  src: url(../../fuentes/Antonio-VariableFont_wght.woff) format("woff");
-  font-display: auto;
-}
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=Bebas+Neue&display=swap");
 /*
 $fam_01: 'Bebas Neue', sans-serif;
 $fam_02: 'Pathway Gothic One', sans-serif;
