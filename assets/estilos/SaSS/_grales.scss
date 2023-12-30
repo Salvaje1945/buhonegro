@@ -120,24 +120,24 @@ a {
 }
 
 h1 {
-  font-size: 9svw;
+  // font-size: 9svw;
   text-transform: uppercase;
   color: map-get($color, "negro");
 }
 
-.h1__01 {
-  font-family: $fam_02;
-  font-size: 12svw;
-  font-weight: 100;
-  // line-height: 1;
-}
+// .h1__01 {
+//   font-family: $fam_02;
+//   font-size: 12svw;
+//   font-weight: 100;
+//   // line-height: 1;
+// }
 
-.h1__02 {
-  font-family: $fam_01;
-  font-size: 14.1svw;
-  font-weight: 900;
-  // line-height: 1;
-}
+// .h1__02 {
+//   font-family: $fam_01;
+//   font-size: 14.1svw;
+//   font-weight: 900;
+//   // line-height: 1;
+// }
 
 // h2,
 // h3,

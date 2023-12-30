@@ -22,9 +22,6 @@
 
     #cabecera {
         grid-area: cabecera;
-        // background-color: map-get($color, "blanco");
-        //padding: 0 2.5%;
-        // height: auto;
     }
 
     #contenido {
@@ -33,7 +30,6 @@
 
     #pie {
         grid-area: pie;
-        // height: 20svh;
         background-color: #333;
     }
 }
@@ -41,6 +37,8 @@
 #contenedor {
 
     #cabecera {
+
+        // *** COMIENZO ESTILOS CABECERA RESOLUCIÓN MÓVILES ***
 
         .cabecera__movil {
             @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0px);
@@ -56,7 +54,6 @@
                     flex-grow: 1;
                     display: inline-block;
                     width: 11%;
-                    // margin: 3svw 0 0;
 
                     img {
                         width: 100%;
@@ -67,6 +64,19 @@
                 .cabecera__movil--marca_txt {
                     display: inline-block;
                     flex-grow: 2;
+
+                    .h1__01 {
+                        font-family: $fam_02;
+                        font-size: 12svw;
+                        font-weight: 100;
+                    }
+                      
+                    .h1__02 {
+                        font-family: $fam_01;
+                        font-size: 14.1svw;
+                        font-weight: 900;
+                    }
+
                 }
             }
 
@@ -79,7 +89,6 @@
                     svg {
                         width: 9svw;
                         height: 9svw;
-                        //background: map-get($color, "naranja_03");
                         fill: map-get($color, "negro");
                         stroke: map-get($color, "negro");
                         stroke-width: 9px;
@@ -93,7 +102,7 @@
             @include cabeza__desplegables--edit ($cbz_dsp-wth: 100svw, $cbz_dsp-hgt: 100svh, $cbz_dsp-pos: fixed, $cbz_dsp-pdd: 3svh);
             top: 0;
             left: -100%;
-            transition: .5s ease all;
+            transition: .3s ease all;
             background-color: map-get($color, "gris_01");
 
             .cabecera__movil--menu_cerrar {
@@ -106,10 +115,7 @@
                     svg {
                         width: 5.31svh;
                         height: 5.31svh;
-                        //background: map-get($color, "naranja_03");
                         fill: map-get($color, "blanco");
-                        // stroke: map-get($color, "blanco");
-                        // stroke-width: 9px;
                     }
     
                 }
@@ -149,10 +155,7 @@
                                 svg {
                                     width: 7svh;
                                     height: 7svh;
-                                    //background: map-get($color, "naranja_03");
                                     fill: map-get($color, "blanco");
-                                    // stroke: map-get($color, "blanco");
-                                    // stroke-width: 9px;
                                 }
 
                             }
@@ -168,19 +171,106 @@
 
         .cabecera__movil--menu.abierto {
             left: 0;
-            transition: .5s ease all;
+            transition: .3s ease all;
         }
 
-        // .iconito {
-        //     width: 7svw;
-        //     height: 7svw;
-        //     //background: map-get($color, "naranja_03");
-        //     fill: map-get($color, "negro");
-        //     stroke: map-get($color, "negro");
-        //     stroke-width: 9px;
-        // }
+        
+
+        // *** FIN ESTILOS CABECERA RESOLUCIÓN MÓVILES ***
+        
+        // *** COMIENZO ESTILOS CABECERA RESOLUCIÓN ESCRITORIO ***
+
+        .cabecera__dkp {
+            @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0px);
+            height: 21vh;
+            background-color: map-get($color, "gris_17");
+            padding: 0 2.5%;
+
+            .cabecera__dkp--marca {
+                @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: flex-start, $flx_bx_gap: 0px);
+
+                .cabecera__dkp--marca_img {
+                    display: inline-block;
+                    width: 99.125px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        display: block;
+                    }
+                }
+
+                .cabecera__dkp--marca_txt {
+                    display: inline-block;
+
+                    h1 {
+                        display: inline-block;
+                        line-height: 1;
+
+
+                        .h1__01--dkp {
+                            font-family: $fam_02;
+                            font-size: 71.37px;
+                            font-weight: 100;
+                        }
+                          
+                        .h1__02--dkp {
+                            font-family: $fam_01;
+                            font-size: 87.23px;
+                            font-weight: 900;
+                            line-height: 0;
+                        }
+                        
+                    }
+
+                    
+
+                }
+            }
+
+            .cabecera__dkp--menu {
+                display: inline-block;
+
+                ul {
+                    @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0px);
+                    list-style: none;
+                    font-size: 3svh;
+                    font-family: $fam_02;
+                    text-transform: uppercase;
+                    color: map-get($color, "gris_01");
+                    line-height: 1;
+
+                    li {
+                        display: inline-block;
+                        padding: 0 1svh;
+
+                        a {
+                            color: map-get($color, "gris_01");
+                            cursor: pointer;
+
+                            &:hover {
+                                color: map-get($color, "rojo_03");
+                            }
+                        }
+
+                        &:last-child {
+                            padding: 0 0 0 1svh;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // *** FIN ESTILOS CABECERA RESOLUCIÓN ESCRITORIO ***
 
     }
+
+    
 
 }
 
