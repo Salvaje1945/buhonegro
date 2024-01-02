@@ -336,22 +336,25 @@
                                 //     -2px 2px 0 #000,
                                 //     -2px -2px 0 #000,
                                 //     2px -2px 0 #000;
-                                margin: 0 0 9svw;
+                                margin: 0 0 4.78svh;
                                 font-family: $fam_02;
-                                font-size: 16svw;
+                                // font-size: 8.5svh;
+                                font-size: calc(8.5svh + 2svw);
                                 line-height: 1;
                                 font-weight: 700;
-                                padding: 0 0 0 3svw;
+                                padding: 3svh 0 0 3svw;
                             }
 
 
                             p {
                                 color: map-get($color, "gris_06");
-                                font-size: 9svw;
+                                // font-size: 4.78svh;
+                                font-size: calc(4.78svh + 1svw);
                                 text-shadow: #000 3px 3px 1px;
                                 font-weight: 400;
                                 font-family: $fam_02;
                                 padding: 0 7.5svw;
+                                line-height: 1;
                             }
                         }
                     }
@@ -393,8 +396,8 @@
                     cursor: pointer;
 
                     svg {
-                        width: 7svw;
-                        height: 7svw;
+                        width: 3.72svh;
+                        height: 3.72svh;
                         fill: map-get($color, "negro");
                         stroke: map-get($color, "negro");
                         stroke-width: 3px;

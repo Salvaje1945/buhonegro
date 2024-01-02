@@ -2,6 +2,82 @@
 @use 'predef' as *;
 
 
+@media only screen and (min-width: map-get($wth_res, "mob_06")) {
+
+    #contenedor {
+
+        #cabecera {
+
+            .cabecera__movil {
+
+                .cabecera__movil--marca {
+
+                    .cabecera__movil--marca_img {
+
+                        width: 109.11px;
+
+                    }
+
+                    .cabecera__movil--marca_txt {
+
+                        .h1__01 {
+                            font-size: 79.2px;
+                        }
+
+                        .h1__02 {
+                            font-size: 93.06px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+}
+
+@media only screen and (min-width: map-get($wth_res, "dkp_01")) {
+
+    #contenedor {
+
+        #contenido {
+
+            #contenido__carrousel {
+
+                .contenido__carrousel--slider {
+
+                    .slider {
+
+                        .slide {
+
+                            .info {
+
+                                p {
+                                    padding: 0 3svw;
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
 /*
 @media only screen and (min-width: map-get($wth_res, "mob_03")) {
 
