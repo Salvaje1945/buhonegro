@@ -22,12 +22,10 @@
 
     #cabecera {
         grid-area: cabecera;
-        // border-bottom: 1px solid #000000;
     }
 
     #contenido {
         grid-area: contenido;
-        // margin-top: 5svh;
     }
 
     #pie {
@@ -275,8 +273,8 @@
     #contenido {
         
         #contenido__carrousel {
-            // height: 82svh;
-            // overflow: hidden;
+            overflow-x: hidden;
+            height: 82svh;
 
             .contenido__carrousel--slider {
 
@@ -285,13 +283,8 @@
                     background: map-get($color, "gris_01");
                     width: 100%;
                     min-height: 578.92px;
-                    // height: 133.33svw;
-                    // height: 70.82svh;
-                    // height: calc(100svh - 13.33svw);
                     height: 82svh;
-                    //margin: 20px;
                     overflow: hidden;
-                    //border-radius: 10px;
                     transition: .5s ease all;
 
                     .slide {
@@ -302,40 +295,20 @@
 
                         img {
                             position: absolute;
-                            //width: 225%;
                             width: 100%;
-                            //min-height: 500px;
                             height: 100%;
-                            //object-fit: contain;
                             object-fit: cover;
                         }
 
                         .info {
                             position: absolute;
-                            //color: #222;
-                            // color: map-get($color, "gris_11");
-                            // font-family: $fam_02;
-                            //background: rgba(255, 255, 255, 0.3);
-                            // width: 75%;
-                            // margin-top: 50px;
-                            // margin-left: 50px;
-                            // padding: 20px;
                             padding: 2svw;
-                            // border-radius: 5px;
                             width: 100%;
-                            //box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
                             
 
                             h2 {
                                 color: map-get($color, "gris_11");
                                 text-shadow: #000 4px 4px 1px;
-                                // -webkit-text-stroke-width: 3px;
-                                // -webkit-text-stroke-color: map-get($color, "negro");
-                                // text-shadow:
-                                //     2px 2px 0 #000,
-                                //     -2px 2px 0 #000,
-                                //     -2px -2px 0 #000,
-                                //     2px -2px 0 #000;
                                 margin: 0 0 4.78svh;
                                 font-family: $fam_02;
                                 // font-size: 8.5svh;
@@ -348,7 +321,6 @@
 
                             p {
                                 color: map-get($color, "gris_06");
-                                // font-size: 4.78svh;
                                 font-size: calc(4.78svh + 1svw);
                                 text-shadow: #000 3px 3px 1px;
                                 font-weight: 400;
@@ -375,10 +347,7 @@
                 }
                   
                 .navigation {
-                    // height: 133.33svw;
-                    // height: calc(100svh - 13.33svw);
-                    // height: calc(100svh - 9svw);
-                    height: 85svh;
+                    height: 83svh;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -389,11 +358,12 @@
                 .prev-btn,
                 .next-btn {
                     z-index: 997;
-                    // font-size: 2em;
                     color: #222;
                     background: rgba(255, 255, 255, 0.5);
                     padding: 3px;
                     cursor: pointer;
+                    // width: 6.07svh;
+                    // height: 6.07svh;
 
                     svg {
                         width: 3.72svh;
@@ -401,6 +371,7 @@
                         fill: map-get($color, "negro");
                         stroke: map-get($color, "negro");
                         stroke-width: 3px;
+                        display: block;
                     }
                 }
                   
@@ -421,209 +392,215 @@
 
                     .slide-icon {
                         z-index: 997;
-                        background: rgba(255, 255, 255, 0.5);
+                        background: map-get($color, "gris_04");
                         width: 20px;
-                        height: 10px;
+                        height: 20px;
                         transform: translateY(-50px);
                         margin: 0 6px;
-                        border-radius: 2px;
+                        border-radius: 50%;
                         box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+                        border: 1px solid map-get($color, "negro");
                     }
 
                     .slide-icon.active {
-                        background: map-get($color, "rojo_03");
+                        background: map-get($color, "rojo_02");
+                        border: 1px solid map-get($color, "negro");
                     }
                 }
 
             }
 
-            // .contenido__carrousel--slider {
-            //     @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: flex-start, $flx_bx_juco: center, $flx_bx_gap: 0);
-            //     width: 700svw;
-            //     // height: 76svh;
-            //     transition: .5s ease all;
-            //     // overflow: hidden;
-            //     // margin: 3svh 0;
+        }
 
-            //     .contenido__carrousel--slide {
-            //         display: inline-block;
-            //         // width: 33.33%;
-            //         width: 14.28%;
-            //         height: 100%;
-            //         // padding-right: 5vw;
-            //         // padding: 0 5svw;
+        .contenido__info {
+            padding: 5svh 0 0;
+            margin: 1px 0 0;
+            overflow-x: hidden;
+            
 
-            //         img {
-            //             width: 100%;
-            //             height: 100%;
-            //             object-fit: contain;
-            //         }
+            .contenido__info--nosotros {
+                padding: 0 5%;
+                overflow-x: hidden;
+                width: 100svw;
+                margin: 0 0 7svh;
+                
 
-            //     }
+                h3 {
+                    font-family: $fam_01;
+                    font-size: 14svw;
+                    font-weight: 600;
+                    color: map-get($color, "negro");
+                    line-height: 1;
+                    text-transform: uppercase;
+                    left: -100%;
+                    position: relative;
+                    width: auto;
+                    display: inline-block;
+                }
 
-            // }
+                p {
+                    font-family: $fam_03;
+                    font-size: 5.5svw;
+                    color: map-get($color, "negro");
+                    margin: 1.5svh 0 0;
+                    position: relative;
+                    right: -100%;
+                    width: auto;
+                    display: inline-block;
+                }
 
-            // .contenido__carousel--slider {
+            }
 
-            //     .slider {
-            //         position: relative;
-            //         background: map-get($color, "negro");
-            //         width: 100%;
-            //         min-height: 655px;
-            //         // height: 133.33svw;
-            //         // height: 70.82svh;
-            //         height: calc(100svh - 13.33svw);
-            //         //margin: 20px;
-            //         overflow: hidden;
-            //         //border-radius: 10px;
-            //         transition: .5s ease all;
+            .contenido__info--servicios {
+                background: map-get($color, "gris_18");
 
-            //         .slide {
-            //             position: absolute;
-            //             width: 100%;
-            //             height: 100%;
-            //             clip-path: circle(0% at 0 50%);
+                .contenido__info--servicios_margensep {
+                    height: 14px;
+                    width: 100%;
+    
+                    div {
+                        position: relative;
+    
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            left: -0%;
+                            top: 100%;
+                            z-index: 10;
+                            display: block;
+                            height: 30px;
+                            background-size: 30px 100%;
+                            background-image: linear-gradient(135deg, #fff 25%, transparent 25%), linear-gradient(225deg, #fff 25%, transparent 25%);
+                            background-position: 0 0;
+                        }
+                    }
+                }
 
-            //             img {
-            //                 position: absolute;
-            //                 //width: 225%;
-            //                 width: 100%;
-            //                 //min-height: 500px;
-            //                 height: 100%;
-            //                 //object-fit: contain;
-            //                 object-fit: cover;
-            //             }
+                .contenido__info--servicios_margenbott {
+                    height: 14px;
+                    width: 100%;
+                    background: #fff;
+    
+                    div {
+                        position: relative;
+    
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            left: -0%;
+                            top: 100%;
+                            z-index: 10;
+                            display: block;
+                            height: 30px;
+                            background-size: 30px 100%;
+                            background-image: linear-gradient(135deg, #232323 25%, transparent 25%), linear-gradient(225deg, #232323 25%, transparent 25%);
+                            background-position: 0 0;
+                        }
+                    }
+                }
 
-            //             .info {
-            //                 position: absolute;
-            //                 //color: #222;
-            //                 // color: map-get($color, "gris_11");
-            //                 // font-family: $fam_02;
-            //                 //background: rgba(255, 255, 255, 0.3);
-            //                 // width: 75%;
-            //                 // margin-top: 50px;
-            //                 // margin-left: 50px;
-            //                 // padding: 20px;
-            //                 padding: 2svw;
-            //                 // border-radius: 5px;
-            //                 width: 100%;
-            //                 //box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
-                            
+                .contenido__info--servicios_cont {
+                    padding: 5svh 5% 0;
 
-            //                 h2 {
-            //                     color: map-get($color, "gris_11");
-            //                     text-shadow: #000 3px 3px 1px;
-            //                     margin: 0 0 9svw;
-            //                     font-family: $fam_01;
-            //                 }
+                    h3 {
+                        font-family: $fam_01;
+                        font-size: 14svw;
+                        font-weight: 600;
+                        color: map-get($color, "gris_06");
+                        line-height: 1;
+                        text-transform: uppercase;
+                        // right: -100%;
+                        right: -100%;
+                        position: relative;
+                        width: auto;
+                        display: block;
+                        margin: 0 0 5svh;
+                    }
 
-            //                 .info__h2--nrm {
-            //                     font-size: 15svw;
-            //                 }
+                    .info__servicios--cont_cont {
+                        @include caja__flexible--edit ($flx_bx_ff: row wrap, $flx_bx_alit: flex-start, $flx_bx_juco: space-evenly, $flx_bx_gap: 0px);
 
-            //                 .info__h2--mdn {
-            //                     font-size: 16svw;
-            //                 }
+                        .info__servicios--cont_box {
+                            display: inline-block;
+                            // background-color:brown;
+                            min-width: 90svw;
+                            // min-height: 500px;
+                            margin: 0 0 5svh;
+                            opacity: 0;
 
-            //                 .info__h2--gde {
-            //                     font-size: 20svw;
-            //                     line-height: 1.1;
-            //                 }
+                            .servicios__cont--box_img {
+                                top: 0;
+                                left: 0;
+                                width: 70px;
+                                float: left;
+                                margin: 0 1.5svh 0 0;
 
-            //                 p {
-            //                     color: map-get($color, "gris_06");
-            //                     font-size: 11svw;
-            //                     text-shadow: #000 3px 3px 1px;
-            //                     font-weight: 400;
-            //                     font-family: $fam_02;
-            //                 }
-            //             }
-            //         }
 
-            //         .slide.active {
-            //             clip-path: circle(150% at 0 50%);
-            //             transition: 2s;
-            //         }
+                                img {
+                                    width: 100%;
+                                    object-fit: contain;
+                                }
 
-            //         &:hover {
+                            }
 
-            //             .navigation {
-            //                 opacity: 1;
-            //             }
+                            h4 {
+                                font-family: $fam_01;
+                                font-size: 9svw;
+                                font-weight: 600;
+                                color: map-get($color, "gris_05");
+                                line-height: 1;
+                                text-transform: uppercase;
+                            }
+    
+                            p {
+                                font-family: $fam_03;
+                                font-size: 5.5svw;
+                                color: map-get($color, "blanco");
+                                line-height: 1.8;
+                                // margin: 1.5svh 0 0;
+                                // position: relative;
+                                // right: -100%;
+                                // width: auto;
+                                // display: inline-block;
+                            }
+    
+                        }
 
-            //         }
+                        .info__servicios--cont_box.animacion {
+                            // visibility: visible;
+                            animation: animacionServicios 1.5s forwards;
+    
+                            @keyframes animacionServicios {
+    
+                                0% {
+                                    opacity: 0;
+                                    padding-top: 50px;
+                                }
+    
+                                100% {
+                                    opacity: 1;
+                                    padding-top: 0;
+                                }
+                                
+                            }
+                        }
 
-            //     }
-                  
-            //     .navigation {
-            //         // height: 133.33svw;
-            //         // height: calc(100svh - 13.33svw);
-            //         // height: calc(100svh - 9svw);
-            //         height: 95svh;
-            //         display: flex;
-            //         align-items: center;
-            //         justify-content: space-between;
-            //         opacity: 0;
-            //         transition: opacity 0.5s ease;
-            //     }
-                  
-            //     .prev-btn,
-            //     .next-btn {
-            //         z-index: 997;
-            //         // font-size: 2em;
-            //         color: #222;
-            //         background: rgba(255, 255, 255, 0.8);
-            //         padding: 10px;
-            //         cursor: pointer;
+                    }
 
-            //         svg {
-            //             width: 9svw;
-            //             height: 9svw;
-            //             fill: map-get($color, "negro");
-            //             stroke: map-get($color, "negro");
-            //             stroke-width: 3px;
-            //         }
                     
-            //     }
-                  
-            //     .prev-btn {
-            //         border-top-right-radius: 3px;
-            //         border-bottom-right-radius: 3px;
-            //     }
-                  
-            //     .next-btn {
-            //         border-top-left-radius: 3px;
-            //         border-bottom-left-radius: 3px;
-            //     }
-                  
-            //     .navigation-visibility {
-            //         z-index: 997;
-            //         display: flex;
-            //         justify-content: center;
 
-            //         .slide-icon {
-            //             z-index: 997;
-            //             background: rgba(255, 255, 255, 0.5);
-            //             width: 20px;
-            //             height: 10px;
-            //             transform: translateY(-50px);
-            //             margin: 0 6px;
-            //             border-radius: 2px;
-            //             box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
-            //         }
 
-            //         .slide-icon.active {
-            //             background: map-get($color, "verde_03");
-            //         }
-            //     }
+                }
 
-            // }
+                
+
+            }
 
         }
 
     }
-
-    
 
 }
 

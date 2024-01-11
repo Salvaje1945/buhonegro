@@ -1,9 +1,12 @@
 import mostrarCabecera from './cabecera_responsive.js'
 import carrouselContenido from './carrousel_contenido.js'
+// import dameElAnchoDePantalla from './funciones_globales/ancho_pantalla.js'
+import animacionNosotros from './animaciones/animacion_nosotros.js'
+import animacionServicios from './animaciones/animacion_servicios.js'
 
 document.addEventListener('DOMContentLoaded', ()=> {
 
-    carrouselContenido()
+    
 
     mostrarCabecera('#cabecera', '(min-width: 1024px)',
         `<section class="cabecera__movil">
@@ -33,9 +36,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
             </div>
             <nav class="cabecera__movil--menu_menu">
                 <ul>
-                    <li><a>Inicio</a></li>
-                    <li><a>Nosotros</a></li>
-                    <li><a>Servicios</a></li>
+                    <li><a href="index.html" id="menu-mov-inicio">Inicio</a></li>
+                    <li><a href="#contenido-info" id="menu-mov-nosotros">Nosotros</a></li>
+                    <li><a href="#contenido-servicios" id="menu-mov-servicios">Servicios</a></li>
                     <li><a>Portfolio</a></li>
                     <li><a>Contáctenos</a></li>
                     <li><a>Blog</a></li>
@@ -86,5 +89,28 @@ document.addEventListener('DOMContentLoaded', ()=> {
             </nav>
     </section>`)
 
+    animacionNosotros()
+
+    animacionServicios()
+
+    // carrouselContenido()
+
+    // const anchoDePantallaInicial = dameElAnchoDePantalla()
+    // animacionNosotros(anchoDePantallaInicial)
+
+    // window.addEventListener('resize', ()=> {
+    //     const anchoDePantalla = dameElAnchoDePantalla()
+    //     animacionNosotros(anchoDePantalla)
+        
+    // })
+
 
 })
+
+// window.addEventListener('resize', ()=> {
+//     const anchoDePantalla = dameElAnchoDePantalla()
+//     animacionNosotros(anchoDePantalla)
+    
+// })
+
+carrouselContenido()

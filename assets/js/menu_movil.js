@@ -8,6 +8,14 @@ export default function menuMovil() {
 
     const elMenu = $('#movil-menu')
 
+    const inicio = $('#menu-mov-inicio')
+
+    const nosotros = $('#menu-mov-nosotros')
+
+    const servicios = $('#menu-mov-servicios')
+
+    
+
     function abrirMenu() {
         
         elMenu.classList.add('abierto')
@@ -23,5 +31,12 @@ export default function menuMovil() {
     menuAbrir.addEventListener('click', abrirMenu)
 
     menuCerrar.addEventListener('click', cerrarMenu)
+
+    inicio.addEventListener('click', cerrarMenu)
+
+    nosotros.addEventListener('click', cerrarMenu)
+
+    servicios.addEventListener('click', cerrarMenu)
+
 
 }

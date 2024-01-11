@@ -1,6 +1,45 @@
 @use 'vars' as *;
 @use 'predef' as *;
 
+@media only screen and (min-width: map-get($wth_res, "mob_04")) {
+
+    #contenedor {
+
+        #contenido {
+
+            .contenido__info {
+
+                .contenido__info--nosotros {
+
+                    h3 {
+                        font-size: 67.34px;
+                    }
+
+                    p {
+                        font-size: 26.45px;
+                    }
+
+                }
+
+                .contenido__info--servicios {
+
+                    .contenido__info--servicios_cont {
+
+                        h3 {
+                            font-size: 67.34px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
 
 @media only screen and (min-width: map-get($wth_res, "mob_06")) {
 
