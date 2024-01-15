@@ -30,7 +30,6 @@
 
     #pie {
         grid-area: pie;
-        background-color: #333;
     }
 }
 
@@ -546,17 +545,20 @@
                             }
 
                             h4 {
-                                font-family: $fam_01;
-                                font-size: 9svw;
-                                font-weight: 600;
-                                color: map-get($color, "gris_05");
+                                font-family: $fam_02;
+                                // font-size: 8svw;
+                                font-size: 30px;
+                                font-weight: 400;
+                                color: map-get($color, "blanco");
                                 line-height: 1;
                                 text-transform: uppercase;
+                                margin: 0 0 1.5svh;
                             }
     
                             p {
                                 font-family: $fam_03;
-                                font-size: 5.5svw;
+                                // font-size: 5.5svw;
+                                font-size: 20.625px;
                                 color: map-get($color, "blanco");
                                 line-height: 1.8;
                                 // margin: 1.5svh 0 0;
@@ -587,19 +589,105 @@
                             }
                         }
 
+                    } 
+
+                }                
+
+            }
+
+            .contenido__info--portfolio {
+                padding: 5svh 5% 0;
+                margin: 1px 0 7svh;
+
+                h3 {
+                    font-family: $fam_01;
+                    font-size: 14svw;
+                    font-weight: 600;
+                    color: map-get($color, "rojo_03");
+                    line-height: 1;
+                    text-transform: uppercase;
+                    display: block;
+                    margin: 0 0 5svh;
+                }
+
+                .contenido__info--portfolio_cont {
+                    @include caja__flexible--edit ($flx_bx_ff: row wrap, $flx_bx_alit: flex-start, $flx_bx_juco: space-evenly, $flx_bx_gap: 0px);
+                    margin: 0 0 3svh;
+
+                    .contenido__info--portfolio_box {
+                        display: inline-block;
+                        min-width: 90svw;
+                        border-bottom: 1px solid map-get($color, "negro");
+                        padding: 0 0 5svh;
+                        margin: 0 0 5svh;
+
+                        h4 {
+                            font-family: $fam_03;
+                            font-size: 21px;
+                            font-weight: 400;
+                            color: map-get($color, "negro");
+                            line-height: 1;
+                            text-transform: uppercase;
+                            margin: 0 0 1.5svh;
+                        }
+
+                        .info__portfolio--box_img {
+                            width: 100%;
+                            margin: 0 0 1svh;
+                            border: 1px solid map-get($color, "negro");
+
+                            img {
+                                width: 100%;
+                                object-fit: contain;
+                                display: block;
+                            }
+
+                        }
+
+                        p {
+                            font-family: $fam_03;
+                            font-size: 18px;
+                            color: map-get($color, "negro");
+                            font-weight: 500;
+                        }
+
+                        &:last-child {
+                            border-bottom: none;
+                            padding: 0 0 0;
+                        }
+
                     }
-
-                    
-
 
                 }
 
-                
+                // .contenido__info--portfolio_h3 {
+                //     opacity: 0;
+                // }
+
+                // .contenido__info--portfolio_h3.animacion {
+                //     animation: animacionPortfolio 1.5s forwards;
+
+                //     @keyframes animacionPortfolio {
+
+                //         0% {
+                //             opacity: 0;
+                //         }
+
+                //         100% {
+                //             opacity: 1;
+                //         }
+                        
+                //     }
+                // }
 
             }
 
         }
 
+    }
+
+    #pie {
+        background-color: map-get($color, "gris_01");
     }
 
 }

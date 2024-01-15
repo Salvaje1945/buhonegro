@@ -3,6 +3,8 @@ import carrouselContenido from './carrousel_contenido.js'
 // import dameElAnchoDePantalla from './funciones_globales/ancho_pantalla.js'
 import animacionNosotros from './animaciones/animacion_nosotros.js'
 import animacionServicios from './animaciones/animacion_servicios.js'
+import animacionPortfolio from './animaciones/animacion_portfolio.js'
+import listaPortfolio from './mostrarPortfolio.js'
 
 document.addEventListener('DOMContentLoaded', ()=> {
 
@@ -39,9 +41,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
                     <li><a href="index.html" id="menu-mov-inicio">Inicio</a></li>
                     <li><a href="#contenido-info" id="menu-mov-nosotros">Nosotros</a></li>
                     <li><a href="#contenido-servicios" id="menu-mov-servicios">Servicios</a></li>
-                    <li><a>Portfolio</a></li>
-                    <li><a>Contáctenos</a></li>
-                    <li><a>Blog</a></li>
+                    <li><a href="#contenido-portfolio" id="menu-mov-portfolio">Portfolio</a></li>
+                    <li><a href="#contenido-proyectos" id="menu-mov-proyectos">Proyectos</a></li>
+                    <li><a href="#pie-contacto" id="menu-mov-contacto">Contáctenos</a></li>
                     <li>
                         <div>
                             <a>
@@ -83,8 +85,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
                     <li><a>Nosotros</a></li>
                     <li><a>Servicios</a></li>
                     <li><a>Portfolio</a></li>
+                    <li><a>Proyectos</a></li>
                     <li><a>Contáctenos</a></li>
-                    <li><a>Blog</a></li>
                 </ul>
             </nav>
     </section>`)
@@ -92,6 +94,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
     animacionNosotros()
 
     animacionServicios()
+
+    animacionPortfolio()
+
+    listaPortfolio()
 
     // carrouselContenido()
 

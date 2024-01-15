@@ -14,6 +14,8 @@ export default function menuMovil() {
 
     const servicios = $('#menu-mov-servicios')
 
+    const portfolio = $('#menu-mov-portfolio')
+
     
 
     function abrirMenu() {
@@ -37,6 +39,8 @@ export default function menuMovil() {
     nosotros.addEventListener('click', cerrarMenu)
 
     servicios.addEventListener('click', cerrarMenu)
+
+    portfolio.addEventListener('click', cerrarMenu)
 
 
 }

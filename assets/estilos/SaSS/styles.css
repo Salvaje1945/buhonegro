@@ -263,6 +263,27 @@ h1 {
   color: #000;
 }
 
+.btn_01 {
+  display: block;
+  width: 40%;
+  height: 6svh;
+  background-color: #232323;
+  color: #ff0000;
+  font-family: "Antonio", sans-serif;
+  font-size: 3svh;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.2s ease all;
+  border-radius: 7px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+.btn_01:hover {
+  background-color: #cb0000;
+  color: #000;
+  transition: 0.2s linear all;
+}
+
 #contenedor {
   display: grid;
   grid-template-columns: 100%;
@@ -283,7 +304,6 @@ h1 {
 }
 #contenedor #pie {
   grid-area: pie;
-  background-color: #333;
 }
 
 #contenedor #cabecera .cabecera__movil {
@@ -711,16 +731,17 @@ h1 {
      object-fit: contain;
 }
 #contenedor #contenido .contenido__info .contenido__info--servicios .contenido__info--servicios_cont .info__servicios--cont_cont .info__servicios--cont_box h4 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 9svw;
-  font-weight: 600;
-  color: #ccc;
+  font-family: "Antonio", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
   line-height: 1;
   text-transform: uppercase;
+  margin: 0 0 1.5svh;
 }
 #contenedor #contenido .contenido__info .contenido__info--servicios .contenido__info--servicios_cont .info__servicios--cont_cont .info__servicios--cont_box p {
   font-family: "Urbanist", sans-serif;
-  font-size: 5.5svw;
+  font-size: 20.625px;
   color: #fff;
   line-height: 1.8;
 }
@@ -747,6 +768,68 @@ h1 {
     opacity: 1;
     padding-top: 0;
   }
+}
+#contenedor #contenido .contenido__info .contenido__info--portfolio {
+  padding: 5svh 5% 0;
+  margin: 1px 0 7svh;
+}
+#contenedor #contenido .contenido__info .contenido__info--portfolio h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 14svw;
+  font-weight: 600;
+  color: #960101;
+  line-height: 1;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 0 5svh;
+}
+#contenedor #contenido .contenido__info .contenido__info--portfolio .contenido__info--portfolio_cont {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 0px;
+  margin: 0 0 3svh;
+}
+#contenedor #contenido .contenido__info .contenido__info--portfolio .contenido__info--portfolio_cont .contenido__info--portfolio_box {
+  display: inline-block;
+  min-width: 90svw;
+  border-bottom: 1px solid #000;
+  padding: 0 0 5svh;
+  margin: 0 0 5svh;
+}
+#contenedor #contenido .contenido__info .contenido__info--portfolio .contenido__info--portfolio_cont .contenido__info--portfolio_box h4 {
+  font-family: "Urbanist", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 1.5svh;
+}
+#contenedor #contenido .contenido__info .contenido__info--portfolio .contenido__info--portfolio_cont .contenido__info--portfolio_box .info__portfolio--box_img {
+  width: 100%;
+  margin: 0 0 1svh;
+  border: 1px solid #000;
+}
+#contenedor #contenido .contenido__info .contenido__info--portfolio .contenido__info--portfolio_cont .contenido__info--portfolio_box .info__portfolio--box_img img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+#contenedor #contenido .contenido__info .contenido__info--portfolio .contenido__info--portfolio_cont .contenido__info--portfolio_box p {
+  font-family: "Urbanist", sans-serif;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+}
+#contenedor #contenido .contenido__info .contenido__info--portfolio .contenido__info--portfolio_cont .contenido__info--portfolio_box:last-child {
+  border-bottom: none;
+  padding: 0 0 0;
+}
+#contenedor #pie {
+  background-color: #333;
 }
 
 @media only screen and (min-width: 481px) {

@@ -158,13 +158,14 @@ h1 {
 //   list-style: none;
 // }
 
-// .btn_01 {
-//   display: block;
-//   @include norm__btns($norm_btn-wth: 100%, $norm_btn-hgt: 6svh, $norm_btn-bgc: map-get($color, "verde_03"), $norm_btn-color: map-get($color, "blanco"), $norm_btn-fntsiz: 3.5svh, $norm_btn-fntwght: 600, $norm_btn-brdrad: 7px, $norm_btn-hvr_bgc: map-get($color, "gris_01"), $norm_btn-hvr_color: map-get($color, "blanco"));
-//   letter-spacing: .3svw;
-//   line-height: 1;
-//   padding: 0 0 2.5px;
-// }
+.btn_01 {
+  display: block;
+  @include norm__btns($norm_btn-wth: 40%, $norm_btn-hgt: 6svh, $norm_btn-bgc: map-get($color, "gris_18"), $norm_btn-color: map-get($color, "rojo_01"), $norm_btn-fntsiz: 3svh, $norm_btn-fntwght: 600, $norm_btn-brdrad: 7px, $norm_btn-hvr_bgc: map-get($color, "rojo_02"), $norm_btn-hvr_color: map-get($color, "negro"));
+  // letter-spacing: .3svw;
+  // line-height: 1;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
 
 // .btn_01.no {
 //   display: none;
