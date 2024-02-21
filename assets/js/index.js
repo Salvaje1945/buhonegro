@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
         `<section class="cabecera__movil">
             <article class="cabecera__movil--marca">
                 <div class="cabecera__movil--marca_img">
-                    <img src="assets/img/buho-negro-desarrollos-logo.png" alt="BÚHO NEGRO DESARROLLOS" />
+                    <img src="assets/img/buho-negro-desarrollos-logo.png" alt="BÚHO WAPPS DESARROLLOS" />
                 </div>
                 <div class="cabecera__movil--marca_txt">
-                    <h1><span class="h1__01">BÚHO</span><span class="h1__02">NEGRO</span></h1>
+                    <h1><span class="h1__01">BÚHO</span><span class="h1__02">WAPPS</span></h1>
                 </div>
             </article>
             <article class="cabecera__movil--menu_btn">
@@ -73,10 +73,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
         `<section class="cabecera__dkp">
             <article class="cabecera__dkp--marca">
                 <div class="cabecera__dkp--marca_img">
-                    <img src="assets/img/buho-negro-desarrollos-logo.png" alt="BÚHO NEGRO DESARROLLOS" />
+                    <img src="assets/img/buho-negro-desarrollos-logo.png" alt="BÚHO WAPPS DESARROLLOS" />
                 </div>
                 <div class="cabecera__dkp--marca_txt">
-                    <h1><span class="h1__01--dkp">BÚHO</span><span class="h1__02--dkp">NEGRO</span></h1>
+                    <h1><span class="h1__01--dkp">BÚHO</span><span class="h1__02--dkp">WAPPS</span></h1>
                 </div>
             </article>
             <nav class="cabecera__dkp--menu">

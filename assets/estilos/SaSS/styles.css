@@ -347,6 +347,7 @@ h1 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 14.1svw;
   font-weight: 900;
+  letter-spacing: -1px;
 }
 #contenedor #cabecera .cabecera__movil .cabecera__movil--menu_btn {
   display: inline-block;
@@ -829,7 +830,17 @@ h1 {
   padding: 0 0 0;
 }
 #contenedor #pie {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 0px;
   background-color: #333;
+  padding: 5svh 5% 3svh;
+}
+#contenedor #pie .pie__box {
+  display: inline-block;
+  min-width: 90svw;
 }
 
 @media only screen and (min-width: 481px) {
