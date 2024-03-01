@@ -284,7 +284,7 @@
                     position: relative;
                     background: map-get($color, "gris_01");
                     width: 100%;
-                    min-height: 578.92px;
+                    // min-height: 578.92px;
                     height: 82svh;
                     overflow: hidden;
                     transition: .5s ease all;
@@ -661,6 +661,10 @@
 
                     }
 
+                }
+
+                .contenido__info--portfolio_btn {
+                    @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0px);
                 }
 
                 // .contenido__info--portfolio_h3 {

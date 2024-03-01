@@ -264,7 +264,7 @@ h1 {
 }
 
 .btn_01 {
-  display: block;
+  display: none;
   width: 40%;
   height: 6svh;
   background-color: #232323;
@@ -282,6 +282,10 @@ h1 {
   background-color: #cb0000;
   color: #000;
   transition: 0.2s linear all;
+}
+
+.btn_01.activo {
+  display: inline-block;
 }
 
 #contenedor {
@@ -509,7 +513,6 @@ h1 {
   position: relative;
   background: #333;
   width: 100%;
-  min-height: 578.92px;
   height: 82svh;
   overflow: hidden;
   transition: 0.5s ease all;
@@ -828,6 +831,13 @@ h1 {
 #contenedor #contenido .contenido__info .contenido__info--portfolio .contenido__info--portfolio_cont .contenido__info--portfolio_box:last-child {
   border-bottom: none;
   padding: 0 0 0;
+}
+#contenedor #contenido .contenido__info .contenido__info--portfolio .contenido__info--portfolio_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
 }
 #contenedor #pie {
   display: flex;

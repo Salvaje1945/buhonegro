@@ -9,6 +9,8 @@ export default function listaPortfolio() {
 
     let contadorMostrados = 3
 
+    const minimoContador = 3
+
     // function trabajosFilter(elPortfolio) {
 
     //     const filtrados = elPortfolio.filter(seccion => seccion.seccion === 'portfolio')
@@ -32,7 +34,7 @@ export default function listaPortfolio() {
     }
 
     function mostrarMenos() {
-        contadorMostrados = 3
+        contadorMostrados -= 3
         renderizarTrabajos()
     }
 
@@ -44,6 +46,7 @@ export default function listaPortfolio() {
         for (const trabajo of trabajosAMostrar) {
             elProd = document.createElement('div')
             elProd.className = 'contenido__info--portfolio_box'
+            elProd.id = `elemento-portfolio_${trabajo.id}`
             elProd.innerHTML = `<h4>${trabajo.cliente}</h4>
                                 <div class="info__portfolio--box_img">
                                     <a href="${trabajo.url}" target="_blank" rel="noopener noreferrer">
@@ -55,13 +58,86 @@ export default function listaPortfolio() {
         }
 
         // Mostrar botón "mostrar más" o "mostrar menos" según corresponda
-        const botonMostrar = document.getElementById('botonMostrar')
+        const botonMostrarMas = $('#botonMostrarMas')
+
+        const botonMostrarMenos = $('#botonMostrarMenos')
+
         if (contadorMostrados < todosLosTrabajos.length) {
-            botonMostrar.innerText = 'Ver Más'
-            botonMostrar.onclick = mostrarMas
+            // botonMostrar.innerText = 'Ver Más'
+            if (contadorMostrados > minimoContador) {
+                if(!botonMostrarMas.classList.contains('activo')) {
+                    botonMostrarMas.classList.add('activo')
+                }
+                botonMostrarMenos.classList.add('activo')
+                if(contadorMostrados <= 6) {
+
+                    botonMostrarMenos.onclick = ()=> {
+                        mostrarMenos()
+
+                        window.location = '#contenido-portfolio'
+                    }
+
+                    
+
+
+                } else {
+
+                    botonMostrarMenos.onclick = mostrarMenos
+
+                }
+                // botonMostrarMenos.onclick = mostrarMenos
+                // botonMostrarMenos.addEventListener('click', ()=> {
+
+                //     mostrarMenos()
+
+                //     if(contadorMostrados <= 6) {
+                //         // const enlaceAncla = $('#elemento-portfolio_1').href
+                //         // console.log('ESTO ES EL HREF DEL ANCLA')
+                //         // console.log(enlaceAncla)
+                //         window.location = '#contenido-portfolio'
+                //     }
+
+                // })
+            }
+            botonMostrarMas.onclick = mostrarMas
+            if(contadorMostrados === minimoContador) {
+                if(botonMostrarMenos.classList.contains('activo')) {
+                    botonMostrarMenos.classList.remove('activo')
+                }
+            }
+
+            // if(contadorMostrados === (minimoContador * 2)) {
+            //     if(botonMostrarMenos.classList.contains('activo')) {
+            //         botonMostrarMenos.classList.remove('activo')
+            //     }
+            // }
+
         } else {
-            botonMostrar.innerText = 'Ver Menos'
-            botonMostrar.onclick = mostrarMenos
+
+            if(botonMostrarMas.classList.contains('activo')) {
+                botonMostrarMas.classList.remove('activo')
+            }
+
+            // if(contadorMostrados === minimoContador) {
+            //     if(botonMostrarMenos.classList.contains('activo')) {
+            //         botonMostrarMenos.classList.remove('activo')
+            //     }
+            // } else {
+            //     if(botonMostrarMas.classList.contains('activo')) {
+            //         botonMostrarMas.classList.remove('activo')
+            //     }
+            //     if(!botonMostrarMenos.classList.contains('activo')) {
+            //         botonMostrarMenos.classList.add('activo')
+            //     }
+            // }
+
+            
+
+            // botonMostrar.innerText = 'Ver Menos'
+            // botonMostrar.onclick = mostrarMenos
+            // botonMostrar.addEventListener('click', ()=> {
+            //     if (cont)
+            // })
         }
     }
 

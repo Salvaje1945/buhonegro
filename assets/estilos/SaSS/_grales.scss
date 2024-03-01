@@ -159,12 +159,16 @@ h1 {
 // }
 
 .btn_01 {
-  display: block;
+  display: none;
   @include norm__btns($norm_btn-wth: 40%, $norm_btn-hgt: 6svh, $norm_btn-bgc: map-get($color, "gris_18"), $norm_btn-color: map-get($color, "rojo_01"), $norm_btn-fntsiz: 3svh, $norm_btn-fntwght: 600, $norm_btn-brdrad: 7px, $norm_btn-hvr_bgc: map-get($color, "rojo_02"), $norm_btn-hvr_color: map-get($color, "negro"));
   // letter-spacing: .3svw;
   // line-height: 1;
   margin: 0 auto;
   text-transform: uppercase;
+}
+
+.btn_01.activo {
+  display: inline-block;
 }
 
 // .btn_01.no {

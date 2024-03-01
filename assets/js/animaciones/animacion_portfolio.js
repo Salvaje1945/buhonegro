@@ -24,9 +24,9 @@ export default function animacionPortfolio() {
 
             let scrollActual = window.scrollY || document.documentElement.scrollTop
 
-            console.log('*** SUMA DE ALTURAS ***')
+            // console.log('*** SUMA DE ALTURAS ***')
 
-            console.log(sumaDeAlturas)
+            // console.log(sumaDeAlturas)
 
             if(scrollActual >= sumaDeAlturas) {
 
@@ -34,13 +34,13 @@ export default function animacionPortfolio() {
 
                 let posicionElemento = (scrollActual - sumaDeAlturas) / 1000
 
-                console.log('*** PORCENTAJE SCROLL ***')
+                // console.log('*** PORCENTAJE SCROLL ***')
 
-                console.log(porcentajeScroll)
+                // console.log(porcentajeScroll)
 
-                console.log('*** POSICIÓN ELEMENTO ***')
+                // console.log('*** POSICIÓN ELEMENTO ***')
 
-                console.log(posicionElemento)
+                // console.log(posicionElemento)
 
                 $('#contenido-info-portfolio-titulo').style.opacity = posicionElemento
 

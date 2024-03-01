@@ -60,7 +60,47 @@ export default function portfolio() {
             url: 'https://www.youtube.com/watch?v=MpNUe5sR4LU',
             alt: 'International Fasteners S.A.',
             img: 'assets/img/portfolio/international_fasteners_video-institucional.jpg'
-        }
+        },
+        {
+            id: 7,
+            seccion: 'portfolio',
+            categ: 'Imagen Corporativa',
+            cliente: 'International Fasteners S.A.',
+            desc: 'Tarjetas de felicitación y/o conmemoración por eventos destinada a clientes y proveedores. Diseños varios.',
+            url: '#',
+            alt: 'International Fasteners S.A.',
+            img: 'assets/img/portfolio/international_fasteners_tarjeta.jpg'
+        },
+        {
+            id: 8,
+            seccion: 'portfolio',
+            categ: 'Imagen Corporativa',
+            cliente: 'International Fasteners S.A.',
+            desc: 'Tarjetas de felicitación y/o conmemoración por eventos destinada a clientes y proveedores. Diseños varios.',
+            url: '#',
+            alt: 'International Fasteners S.A.',
+            img: 'assets/img/portfolio/international_fasteners_tarjeta.jpg'
+        },
+        {
+            id: 9,
+            seccion: 'portfolio',
+            categ: 'Imagen Corporativa',
+            cliente: 'International Fasteners S.A.',
+            desc: 'Tarjetas de felicitación y/o conmemoración por eventos destinada a clientes y proveedores. Diseños varios.',
+            url: '#',
+            alt: 'International Fasteners S.A.',
+            img: 'assets/img/portfolio/international_fasteners_tarjeta.jpg'
+        },
+        {
+            id: 10,
+            seccion: 'portfolio',
+            categ: 'Imagen Corporativa',
+            cliente: 'International Fasteners S.A.',
+            desc: 'Tarjetas de felicitación y/o conmemoración por eventos destinada a clientes y proveedores. Diseños varios.',
+            url: '#',
+            alt: 'International Fasteners S.A.',
+            img: 'assets/img/portfolio/international_fasteners_tarjeta.jpg'
+        },
     ]
 
     return trabajosRealizados
