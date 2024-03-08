@@ -786,6 +786,7 @@ h1 {
   text-transform: uppercase;
   display: block;
   margin: 0 0 5svh;
+  opacity: 0;
 }
 #contenedor #contenido .contenido__info .contenido__info--portfolio .contenido__info--portfolio_cont {
   display: flex;
@@ -917,7 +918,7 @@ h1 {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  border: 1px solid #14a341;
+  border: 1px solid #000;
 }
 #contenedor #contenido .contenido__info .contenido__info--proyectos #carrousel-proyectos #proy-gal_mov .proy__gal--mov_img-gde-cont .gal__mov--img_gde-slider_cont #galeria-mov .gal-mov_slider--slide p {
   font-family: "Urbanist", sans-serif;

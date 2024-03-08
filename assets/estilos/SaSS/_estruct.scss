@@ -611,6 +611,7 @@
                     text-transform: uppercase;
                     display: block;
                     margin: 0 0 5svh;
+                    opacity: 0;
                 }
 
                 .contenido__info--portfolio_cont {
@@ -826,7 +827,7 @@
                                         img {
                                             width: 100%;
                                             object-fit: contain;
-                                            border: 1px solid map-get($color, "verde_04");
+                                            border: 1px solid map-get($color, "negro");
                                             //height: 100%;
                                         }
 

@@ -28,31 +28,49 @@ export default function animacionPortfolio() {
 
             // console.log(sumaDeAlturas)
 
-            if(scrollActual >= sumaDeAlturas) {
+            // if(scrollActual >= sumaDeAlturas) {
 
-                let porcentajeScroll = sumaDeAlturasDos / 100 
+            //     let porcentajeScroll = sumaDeAlturasDos / 100 
 
-                let posicionElemento = (scrollActual - sumaDeAlturas) / 1000
+            //     let posicionElemento = (scrollActual - sumaDeAlturas) / 1000
 
-                // console.log('*** PORCENTAJE SCROLL ***')
+            //     const posicionInicio = 2626
 
-                // console.log(porcentajeScroll)
+            //     const posicionFinal = 3306
 
-                // console.log('*** POSICIÓN ELEMENTO ***')
+            //     const totalRecorrido = 680
 
-                // console.log(posicionElemento)
 
-                $('#contenido-info-portfolio-titulo').style.opacity = posicionElemento
-
-                if(posicionElemento >= 0.680) {
-
-                    $('#contenido-info-portfolio-titulo').style.opacity = 1
-
-                }
-
-            }
 
             
+
+            //     $('#contenido-info-portfolio-titulo').style.opacity = posicionElemento
+
+            //     if(posicionElemento >= 0.680) {
+
+            //         $('#contenido-info-portfolio-titulo').style.opacity = 1
+
+            //     }
+
+            // }
+
+            const totalRecorrido = 680
+
+            
+
+            console.log('*** SCROLL ACTUAL ***')
+
+            console.log(scrollActual)
+
+            
+
+            if (scrollActual >= sumaDeAlturas) {
+                let porcentajeScroll = (scrollActual - sumaDeAlturas) / totalRecorrido;
+                let opacidad = Math.min(porcentajeScroll, 1); // Limitar la opacidad a 1.0 máximo
+                $('#contenido-info-portfolio-titulo').style.opacity = opacidad;
+            } else {
+                $('#contenido-info-portfolio-titulo').style.opacity = 0; // Asegurarse de que la opacidad sea 0 antes de alcanzar la posición deseada
+            }
 
             // $('#contenido-info-portfolio-titulo').style.opacity = posicionElemento
 

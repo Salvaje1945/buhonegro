@@ -16,6 +16,8 @@ export default function menuMovil() {
 
     const portfolio = $('#menu-mov-portfolio')
 
+    const proyectos = $('#menu-mov-proyectos')
+
     
 
     function abrirMenu() {
@@ -41,6 +43,8 @@ export default function menuMovil() {
     servicios.addEventListener('click', cerrarMenu)
 
     portfolio.addEventListener('click', cerrarMenu)
+
+    proyectos.addEventListener('click', cerrarMenu)
 
 
 }
