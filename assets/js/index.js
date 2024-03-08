@@ -5,6 +5,7 @@ import animacionNosotros from './animaciones/animacion_nosotros.js'
 import animacionServicios from './animaciones/animacion_servicios.js'
 import animacionPortfolio from './animaciones/animacion_portfolio.js'
 import listaPortfolio from './mostrarPortfolio.js'
+import mostrarLosProyectos from './proyectos_responsive.js'
 
 document.addEventListener('DOMContentLoaded', ()=> {
 
@@ -98,6 +99,34 @@ document.addEventListener('DOMContentLoaded', ()=> {
     animacionPortfolio()
 
     listaPortfolio()
+
+    mostrarLosProyectos('#contenido-proyectos', '(min-width: 1024px)',
+        `<h3 id="contenido-info-proyectos-titulo">Proyectos</h3>
+        <div id="carrousel-proyectos">
+            <div id="proy-gal_mov">
+                <div class="proy__gal--mov_img-gde-cont">
+                    <div class="gal__mov--btn">
+                        <button id="btn-mov-retro" type="button">
+                            <svg role="img">
+                                <use href="assets/img/iconos/iconos.svg#chevron-izq"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="gal__mov--img_gde-slider_cont">
+                        <div id="galeria-mov">
+                        </div>
+                    </div>
+                    <div class="gal__mov--btn">
+                        <button id="btn-mov-avz" type="button">
+                            <svg role="img">
+                                <use href="assets/img/iconos/iconos.svg#chevron-drch"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>`,
+        `<h3 id="contenido-info-proyectos-titulo">Proyectos</h3>`)
 
     // carrouselContenido()
 

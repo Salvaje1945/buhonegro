@@ -34,17 +34,17 @@ export default function animacionServicios() {
 
             let scrollActual = window.scrollY || document.documentElement.scrollTop
 
-            console.log('*** ALTURA PARA ENCABEZADO ***')
+            // console.log('*** ALTURA PARA ENCABEZADO ***')
 
-            console.log(sumaDeAlturasParaEncabezado)
+            // console.log(sumaDeAlturasParaEncabezado)
 
-            console.log('*** ALTURA PARA FRONT-END ***')
+            // console.log('*** ALTURA PARA FRONT-END ***')
 
-            console.log(sumaDeAlturasParaFrontEnd)
+            // console.log(sumaDeAlturasParaFrontEnd)
 
-            console.log('*** SCROLL ACTUAL ***')
+            // console.log('*** SCROLL ACTUAL ***')
 
-            console.log(scrollActual)
+            // console.log(scrollActual)
 
             let porcentajeScroll = (scrollActual * 100) / sumaDeAlturasParaEncabezado
 

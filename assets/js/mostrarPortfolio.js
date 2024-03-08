@@ -72,9 +72,20 @@ export default function listaPortfolio() {
                 if(contadorMostrados <= 6) {
 
                     botonMostrarMenos.onclick = ()=> {
-                        mostrarMenos()
+                        
+                        // const posicionElementoPortfolio = $('#contenido-portfolio').getBoundingClientRect()
 
-                        window.location = '#contenido-portfolio'
+                        // console.log(posicionElementoPortfolio)
+
+                        scroll(0, 3308)
+                        
+                        
+                        setTimeout(mostrarMenos, 750)
+                        // mostrarMenos()
+
+
+
+                        //window.location = '#contenido-portfolio'
                     }
 
                     
@@ -82,7 +93,31 @@ export default function listaPortfolio() {
 
                 } else {
 
-                    botonMostrarMenos.onclick = mostrarMenos
+                    botonMostrarMenos.onclick = ()=> {
+
+                        // const posicionBotonMostrarMenos = $('#botonMostrarMenos').getBoundingClientRect()
+
+                        // const coordenadasYBotonMenos = $('#botonMostrarMenos').window.pageYOffset()
+
+                        const coordenadasYBotonMenos = window.scrollY || document.documentElement.scrollTop
+
+                        // console.log(posicionBotonMostrarMenos)
+
+                        // console.log('***************')
+                        // console.log('COORDENADAS BOTÓN MOSTRAR MENOS')
+                        // console.log(coordenadasYBotonMenos)
+                        // console.log('***************')
+
+                        const cifraResta = 797
+
+                        const coordenadasReposicion = coordenadasYBotonMenos - cifraResta
+
+                        scroll(0, coordenadasReposicion)
+
+                        setTimeout(mostrarMenos, 500)
+
+                        // mostrarMenos()
+                    }
 
                 }
                 // botonMostrarMenos.onclick = mostrarMenos

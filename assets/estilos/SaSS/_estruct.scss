@@ -689,6 +689,196 @@
 
             }
 
+            .contenido__info--proyectos {
+                padding: 5svh 0 7svh;
+                margin: 1px 0 0;
+                background-color: map-get($color, "rojo_04");
+
+                h3 {
+                    font-family: $fam_01;
+                    font-size: 14svw;
+                    font-weight: 600;
+                    color: map-get($color, "blanco");
+                    line-height: 1;
+                    text-transform: uppercase;
+                    display: block;
+                    margin: 0 5% 5svh;
+                }
+
+                #carrousel-proyectos {
+                    display: inline-block;
+
+                    #proy-gal_mov {
+                        //background-color: map-get($color, "verde_03");
+                        // width: 45%;
+                        // min-width: 900px;
+                        // padding: 5svh 0;
+
+                        .proy__gal--mov_img-gde-cont {
+                            @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0px);
+                            width: 100svw;
+    
+                            .gal__mov--btn {
+                                display: inline-block;
+                                text-align: center;
+                                margin: 0 auto;
+                                width: 10%;
+                                
+    
+                                button {
+                                    // cursor: pointer;
+                                    // background: transparent;
+                                    // // border: none;
+                                    // color: map-get($color, "blanco");
+                                    // font-size: 40.68px;
+                                    z-index: 997;
+                                    color: map-get($color, "blanco");
+                                    // background: rgba(255, 255, 255, 0.5);
+                                    background: none;
+                                    padding: 3px;
+                                    cursor: pointer;
+
+                                    svg {
+                                        width: 3.72svh;
+                                        height: 3.72svh;
+                                        fill: map-get($color, "blanco");
+                                        stroke: map-get($color, "blanco");
+                                        stroke-width: 3px;
+                                        display: block;
+                                    }
+                                }
+    
+                            }
+
+                            // .gal__mov--btn.izq {
+                            //     text-align: left;
+                            // }
+
+                            // .gal__mov--btn.dch {
+                            //     text-align: right;
+                            // }
+
+                            // .prev-btn,
+                            // .next-btn {
+                            //     z-index: 997;
+                            //     color: #222;
+                            //     background: rgba(255, 255, 255, 0.5);
+                            //     padding: 3px;
+                            //     cursor: pointer;
+                            //     // width: 6.07svh;
+                            //     // height: 6.07svh;
+
+                            //     svg {
+                            //         width: 3.72svh;
+                            //         height: 3.72svh;
+                            //         fill: map-get($color, "negro");
+                            //         stroke: map-get($color, "negro");
+                            //         stroke-width: 3px;
+                            //         display: block;
+                            //     }
+                            // }
+                            
+                            // .prev-btn {
+                            //     border-top-right-radius: 3px;
+                            //     border-bottom-right-radius: 3px;
+                            // }
+                            
+                            // .next-btn {
+                            //     border-top-left-radius: 3px;
+                            //     border-bottom-left-radius: 3px;
+                            // }
+    
+                            .gal__mov--img_gde-slider_cont {
+                                display: inline-block;
+                                // width: 600px;
+                                width: 80% !important;
+                                overflow: hidden;
+    
+                                #galeria-mov {
+                                    @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: flex-start, $flx_bx_juco: center, $flx_bx_gap: 0px);
+                                    // width: 1800px;
+                                    //width: 300%;
+                                    // height: 76svh;
+                                    transition: .5s ease all;
+                                    // overflow: hidden;
+                                    // margin: 3svh 0;
+    
+                                    .gal-mov_slider--slide {
+                                        display: inline-block;
+                                        // width: 33.33%;
+                                        //width: 33.33%;
+                                        //max-width:80svw;
+                                        height: 100%;
+                                        cursor: pointer;
+                                        // padding-right: 5vw;
+                                        // padding: 0 5svw 0 0;
+
+                                        h4 {
+                                            font-family: $fam_03;
+                                            font-size: 21px;
+                                            font-weight: 400;
+                                            color: map-get($color, "blanco");
+                                            line-height: 1;
+                                            text-transform: uppercase;
+                                            margin: 0 0 1.5svh;
+                                        }
+                        
+                                        img {
+                                            width: 100%;
+                                            object-fit: contain;
+                                            border: 1px solid map-get($color, "verde_04");
+                                            //height: 100%;
+                                        }
+
+                                        p {
+                                            font-family: $fam_03;
+                                            font-size: 18px;
+                                            color: map-get($color, "blanco");
+                                            font-weight: 500;
+                                        }
+                        
+                                    }
+    
+                                }
+                                
+                            }
+                        }
+    
+                        // .proy__gal--dkp_img-thumb-cont {
+                        //     @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: flex-start, $flx_bx_juco: space-around, $flx_bx_gap: 0);
+                        //     margin: 5svh 0 0;
+    
+                        //     .proy__gal--dkp_thumbs-cont {
+                        //         @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: flex-start, $flx_bx_juco: space-between, $flx_bx_gap: 0);
+                        //         // width: 600px;
+                        //         width: 80%;
+    
+                        //         .proy__gal--dkp_thumbs-img {
+                        //             display: inline-block;
+                        //             // width: 33.33%;
+                        //             // width: 150px;
+                        //             width: 25%;
+                        //             height: 100%;
+                        //             // padding-right: 5vw;
+                        //             // padding: 0 5svw 0 0;
+                        //             cursor: pointer;
+                    
+                        //             img {
+                        //                 width: 100%;
+                        //                 object-fit: contain;
+                        //                 //height: 100%;
+                        //             }
+                    
+                        //         }
+    
+                        //     }
+                        // }
+                    }
+
+                }
+
+            }
+
         }
 
     }
