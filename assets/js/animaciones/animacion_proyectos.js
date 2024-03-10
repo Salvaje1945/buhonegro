@@ -1,6 +1,6 @@
 import $ from '../funciones_globales/elementos_por_id.js'
 
-export default function animacionPortfolio() {
+export default function animacionProyectos() {
     
     const alturaCabecera = $('#cabecera').offsetHeight
 
@@ -10,9 +10,13 @@ export default function animacionPortfolio() {
 
     const alturaServicios = $('#contenido-servicios').offsetHeight
 
+    const alturaPortfolio = $('#contenido-portfolio').offsetHeight
+
     // const sumaDeAlturas = alturaCabecera + alturaCarrousel + alturaNosotros + ((alturaServicios / 3) *2)
 
-    const sumaDeAlturas = alturaCabecera + alturaCarrousel + alturaNosotros + (alturaServicios / 2)
+    // const sumaDeAlturas = alturaCabecera + alturaCarrousel + alturaNosotros + alturaServicios + (alturaPortfolio / 2)
+
+    const sumaDeAlturas = 3710
 
     const sumaDeAlturasDos = alturaCabecera + alturaCarrousel + alturaNosotros + (alturaServicios / 2)
 
@@ -24,9 +28,7 @@ export default function animacionPortfolio() {
 
             let scrollActual = window.scrollY || document.documentElement.scrollTop
 
-            // console.log('*** SUMA DE ALTURAS ***')
-
-            // console.log(sumaDeAlturas)
+            
 
             // if(scrollActual >= sumaDeAlturas) {
 
@@ -54,22 +56,42 @@ export default function animacionPortfolio() {
 
             // }
 
-            const totalRecorrido = 680
+            const totalRecorrido = 694
 
-            
+            console.log('*** SUMA DE ALTURAS ***')
 
-            // console.log('*** SCROLL ACTUAL ***')
+            console.log(sumaDeAlturas)            
 
-            // console.log(scrollActual)
+            console.log('*** SCROLL ACTUAL ***')
+
+            console.log(scrollActual)
 
             
 
             if (scrollActual >= sumaDeAlturas) {
-                let porcentajeScroll = (scrollActual - sumaDeAlturas) / totalRecorrido;
-                let opacidad = Math.min(porcentajeScroll, 1); // Limitar la opacidad a 1.0 máximo
-                $('#contenido-info-portfolio-titulo').style.opacity = opacidad;
+                
+                let posicionScrollRecorrido = scrollActual - sumaDeAlturas
+
+                let porcentajeRecorrido = posicionScrollRecorrido / 6.94
+
+                let tamanioFuente = porcentajeRecorrido * 0.14
+
+
+                // let porcentajeScroll = (scrollActual - sumaDeAlturas) / totalRecorrido;
+                // let tamanio = Math.min(porcentajeScroll, 14); // Limitar la tamanio a 1.0 máximo
+
+                if (tamanioFuente >= 14) {
+                    tamanioFuente = 14
+                }
+
+                $('#contenido-info-proyectos-titulo').style.fontSize = tamanioFuente + "svw";
+
+                if (scrollActual >= 4210) {
+                    $('#contenido-info-proyectos-txt').classList.add('animacion')
+                }
+
             } else {
-                $('#contenido-info-portfolio-titulo').style.opacity = 0; // Asegurarse de que la opacidad sea 0 antes de alcanzar la posición deseada
+                $('#contenido-info-proyectos-titulo').style.fontSize = 0 + "svw"; // Asegurarse de que la opacidad sea 0 antes de alcanzar la posición deseada
             }
 
             // $('#contenido-info-portfolio-titulo').style.opacity = posicionElemento

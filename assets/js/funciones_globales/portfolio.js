@@ -116,7 +116,7 @@ export default function portfolio() {
             seccion: 'proyectos',
             categ: 'Desarrollo integral de App',
             cliente: 'App de florería',
-            desc: 'Sitio Web simple desarrollado en HTML con estilos en SaSS-CSS.',
+            desc: 'Tarjetas de felicitación y/o conmemoración por eventos destinada a clientes y proveedores.',
             url: 'https://salvaje1945.github.io/proyectofinalescriba/',
             alt: 'Isabel Rivas',
             img: 'assets/img/portfolio/isabel_rivas_web.jpg'
@@ -136,7 +136,7 @@ export default function portfolio() {
             seccion: 'proyectos',
             categ: 'Imagen Corporativa',
             cliente: 'App de prostitutas',
-            desc: 'Tarjetas de felicitación y/o conmemoración por eventos destinada a clientes y proveedores. Diseños varios.',
+            desc: 'Tarjetas de felicitación y/o conmemoración por eventos destinada a clientes y proveedores.',
             url: '#',
             alt: 'International Fasteners S.A.',
             img: 'assets/img/portfolio/international_fasteners_catalogo.jpg'
@@ -156,7 +156,7 @@ export default function portfolio() {
             seccion: 'proyectos',
             categ: 'Imagen Corporativa',
             cliente: 'App de travestis',
-            desc: 'Video institucional para canal de Youtube.',
+            desc: 'Tarjetas de felicitación y/o conmemoración por eventos destinada a clientes y proveedores.',
             url: 'https://www.youtube.com/watch?v=MpNUe5sR4LU',
             alt: 'International Fasteners S.A.',
             img: 'assets/img/portfolio/international_fasteners_video-institucional.jpg'
@@ -166,7 +166,7 @@ export default function portfolio() {
             seccion: 'proyectos',
             categ: 'Imagen Corporativa',
             cliente: 'App de queso chedar',
-            desc: 'Tarjetas de felicitación y/o conmemoración por eventos destinada a clientes y proveedores. Diseños varios.',
+            desc: 'Tarjetas de felicitación y/o conmemoración por eventos destinada a clientes y proveedores.',
             url: '#',
             alt: 'International Fasteners S.A.',
             img: 'assets/img/portfolio/international_fasteners_tarjeta.jpg'

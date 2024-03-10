@@ -158,17 +158,35 @@ h1 {
 //   list-style: none;
 // }
 
+// .btn_01 {
+//   display: none;
+//   @include norm__btns($norm_btn-wth: 40%, $norm_btn-hgt: 6svh, $norm_btn-bgc: map-get($color, "gris_18"), $norm_btn-color: map-get($color, "rojo_01"), $norm_btn-fntsiz: 3svh, $norm_btn-fntwght: 600, $norm_btn-brdrad: 7px, $norm_btn-hvr_bgc: map-get($color, "rojo_02"), $norm_btn-hvr_color: map-get($color, "negro"));
+//   // letter-spacing: .3svw;
+//   // line-height: 1;
+//   margin: 0 auto;
+//   text-transform: uppercase;
+// }
+
 .btn_01 {
   display: none;
-  @include norm__btns($norm_btn-wth: 40%, $norm_btn-hgt: 6svh, $norm_btn-bgc: map-get($color, "gris_18"), $norm_btn-color: map-get($color, "rojo_01"), $norm_btn-fntsiz: 3svh, $norm_btn-fntwght: 600, $norm_btn-brdrad: 7px, $norm_btn-hvr_bgc: map-get($color, "rojo_02"), $norm_btn-hvr_color: map-get($color, "negro"));
+  @include square__btns ($square_btn-wth: 40%, $square_btn-hgt: 6svh, $square_btn-bgc: map-get($color, "blanco"), $square_btn-color: map-get($color, "rojo_03"), $square_btn-bdr: 3px solid map-get($color, "rojo_03"), $square_btn-fntfam: $fam_02, $square_btn-fntsiz: 3svh, $square_btn-fntwght: 700, $square_btn-hvr_bgc: map-get($color, "blanco"), $square_btn-hvr_color: map-get($color, "negro"), $square_btn-hvr-bdr: 3px solid map-get($color, "negro"));
   // letter-spacing: .3svw;
-  // line-height: 1;
+  line-height: 1;
   margin: 0 auto;
   text-transform: uppercase;
 }
 
 .btn_01.activo {
   display: inline-block;
+}
+
+.btn_02 {
+  display: block;
+  @include square__btns ($square_btn-wth: 40%, $square_btn-hgt: 6svh, $square_btn-bgc: map-get($color, "rojo_04"), $square_btn-color: map-get($color, "blanco"), $square_btn-bdr: 3px solid map-get($color, "blanco"), $square_btn-fntfam: $fam_02, $square_btn-fntsiz: 3svh, $square_btn-fntwght: 700, $square_btn-hvr_bgc: map-get($color, "rojo_04"), $square_btn-hvr_color: map-get($color, "negro"), $square_btn-hvr-bdr: 3px solid map-get($color, "negro"));
+  // letter-spacing: .3svw;
+  line-height: 1;
+  margin: 4svh auto 0;
+  text-transform: uppercase;
 }
 
 // .btn_01.no {

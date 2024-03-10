@@ -133,6 +133,50 @@
     } 
 }
 
+@mixin square__btns ($square_btn-wth: 100%, $square_btn-hgt: 42px, $square_btn-bgc: map-get($color, "azul_02"), $square_btn-color: map-get($color, "gris_08"), $square_btn-bdr: 1px solid map-get($color, "negro"), $square_btn-fntfam: $fam_02, $square_btn-fntsiz: 1rem, $square_btn-fntwght: 600, $square_btn-hvr_bgc: map-get($color, "verde_01"), $square_btn-hvr_color: map-get($color, "blanco"), $square_btn-hvr-bdr: 1px solid map-get($color, "negro")) {
+    width: $square_btn-wth;
+    height: $square_btn-hgt;
+    background-color: $square_btn-bgc;
+    color: $square_btn-color;
+    border: $square_btn-bdr;
+    font-family: $square_btn-fntfam;
+    font-size: $square_btn-fntsiz;
+    font-weight: $square_btn-fntwght;
+    text-align: center;
+    transition: .1s linear all;
+    // outline: none;
+
+    // &:hover {
+    //     // background-color: $square_btn-hvr_bgc;
+    //     color: $square_btn-hvr_color;
+    //     border: $square_btn-hvr-bdr;
+    //     transition: .1s linear all;
+    //     // outline: none;
+    // }
+
+    &:active {
+        // background-color: $square_btn-hvr_bgc;
+        color: $square_btn-hvr_color;
+        border: $square_btn-hvr-bdr;
+        transition: .1s linear all;
+        // outline: none;
+    }
+
+    // &:active {
+
+    // }
+
+    // &:active {
+    //     border-style: inset;
+    // }
+
+    // &:visited {
+    //     background-color: $square_btn-bgc;
+    //     color: $square_btn-color;
+    //     border: $square_btn-bdr;
+    // }
+}
+
 // Cajas hijas
 /*
 .cabeza__extremos {

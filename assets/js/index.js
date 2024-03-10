@@ -6,6 +6,7 @@ import animacionServicios from './animaciones/animacion_servicios.js'
 import animacionPortfolio from './animaciones/animacion_portfolio.js'
 import listaPortfolio from './mostrarPortfolio.js'
 import mostrarLosProyectos from './proyectos_responsive.js'
+import animacionProyectos from './animaciones/animacion_proyectos.js'
 
 document.addEventListener('DOMContentLoaded', ()=> {
 
@@ -43,8 +44,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
                     <li><a href="#contenido-info" id="menu-mov-nosotros">Nosotros</a></li>
                     <li><a href="#contenido-servicios" id="menu-mov-servicios">Servicios</a></li>
                     <li><a href="#contenido-portfolio" id="menu-mov-portfolio">Portfolio</a></li>
-                    <li><a href="#contenido-proyectos" id="menu-mov-proyectos">Proyectos</a></li>
-                    <li><a href="#pie-contacto" id="menu-mov-contacto">Contáctenos</a></li>
+                    <li><a href="#carrousel-proyectos" id="menu-mov-proyectos">Proyectos</a></li>
+                    <li><a href="#pie" id="menu-mov-contacto">Contáctenos</a></li>
                     <li>
                         <div>
                             <a>
@@ -125,8 +126,15 @@ document.addEventListener('DOMContentLoaded', ()=> {
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="contenido__info--proyectos_txt" id="contenido-info-proyectos-txt">
+            <h5>¡Atención!</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper dictum velit, id commodo elit tristique a. Quisque velit leo, lobortis a bibendum ac, placerat sed leo. Sed quis auctor mauris.</p>
+            <button class="btn_02" type="button">SABER MAS</button>
         </div>`,
-        `<h3 id="contenido-info-proyectos-titulo">Proyectos</h3>`)
+    `<h3 id="contenido-info-proyectos-titulo">Proyectos</h3>`)
+
+    animacionProyectos()
 
     // carrouselContenido()
 

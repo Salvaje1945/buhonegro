@@ -267,25 +267,48 @@ h1 {
   display: none;
   width: 40%;
   height: 6svh;
-  background-color: #232323;
-  color: #ff0000;
+  background-color: #fff;
+  color: #960101;
+  border: 3px solid #960101;
   font-family: "Antonio", sans-serif;
   font-size: 3svh;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
-  transition: 0.2s ease all;
-  border-radius: 7px;
+  transition: 0.1s linear all;
+  line-height: 1;
   margin: 0 auto;
   text-transform: uppercase;
 }
-.btn_01:hover {
-  background-color: #cb0000;
+.btn_01:active {
   color: #000;
-  transition: 0.2s linear all;
+  border: 3px solid #000;
+  transition: 0.1s linear all;
 }
 
 .btn_01.activo {
   display: inline-block;
+}
+
+.btn_02 {
+  display: block;
+  width: 40%;
+  height: 6svh;
+  background-color: #740000;
+  color: #fff;
+  border: 3px solid #fff;
+  font-family: "Antonio", sans-serif;
+  font-size: 3svh;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.1s linear all;
+  line-height: 1;
+  margin: 4svh auto 0;
+  text-transform: uppercase;
+}
+.btn_02:active {
+  color: #000;
+  border: 3px solid #000;
+  transition: 0.1s linear all;
 }
 
 #contenedor {
@@ -855,6 +878,53 @@ h1 {
   display: block;
   margin: 0 5% 5svh;
 }
+#contenedor #contenido .contenido__info .contenido__info--proyectos .contenido__info--proyectos_txt {
+  opacity: 0;
+  margin: 7svh 0 0;
+}
+#contenedor #contenido .contenido__info .contenido__info--proyectos .contenido__info--proyectos_txt h5 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 11svw;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 5% 1svh;
+  text-align: center;
+}
+#contenedor #contenido .contenido__info .contenido__info--proyectos .contenido__info--proyectos_txt p {
+  font-family: "Urbanist", sans-serif;
+  font-size: 4.8svw;
+  color: #fff;
+  font-weight: 400;
+  margin: 0 5%;
+  text-align: justify;
+}
+#contenedor #contenido .contenido__info .contenido__info--proyectos .contenido__info--proyectos_txt.animacion {
+  -webkit-animation: animacionProyectosTxt 2s forwards;
+          animation: animacionProyectosTxt 2s forwards;
+}
+@-webkit-keyframes animacionProyectosTxt {
+  0% {
+    opacity: 0;
+    padding-top: 50px;
+  }
+  100% {
+    opacity: 1;
+    padding-top: 0;
+  }
+}
+@keyframes animacionProyectosTxt {
+  0% {
+    opacity: 0;
+    padding-top: 50px;
+  }
+  100% {
+    opacity: 1;
+    padding-top: 0;
+  }
+}
 #contenedor #contenido .contenido__info .contenido__info--proyectos #carrousel-proyectos {
   display: inline-block;
 }
@@ -925,6 +995,8 @@ h1 {
   font-size: 18px;
   color: #fff;
   font-weight: 500;
+  text-align: left;
+  margin: 0;
 }
 #contenedor #pie {
   display: flex;
@@ -932,12 +1004,47 @@ h1 {
   align-items: flex-start;
   justify-content: space-evenly;
   gap: 0px;
-  background-color: #333;
+  background-color: #232323;
   padding: 5svh 5% 3svh;
 }
 #contenedor #pie .pie__box {
   display: inline-block;
   min-width: 90svw;
+}
+#contenedor #pie .pie__marca {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  padding: 3px 5% 0;
+}
+#contenedor #pie .pie__marca .pie__marca--img {
+  flex-grow: 1;
+  display: inline-block;
+  width: 21%;
+  margin: 0 3svh 0 0;
+}
+#contenedor #pie .pie__marca .pie__marca--img img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#contenedor #pie .pie__marca .pie__marca--txt {
+  display: inline-block;
+  flex-grow: 2;
+}
+#contenedor #pie .pie__marca .pie__marca--txt .pie__marca--h1_01 {
+  font-family: "Antonio", sans-serif;
+  font-size: 12svw;
+  font-weight: 100;
+  color: #ccc;
+}
+#contenedor #pie .pie__marca .pie__marca--txt .pie__marca--h1_02 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 14.1svw;
+  font-weight: 900;
+  color: #ccc;
 }
 
 @media only screen and (min-width: 481px) {
