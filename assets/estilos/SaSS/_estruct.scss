@@ -951,44 +951,66 @@
         }
 
         .pie__marca {
-            @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0px);
             padding: 3px 5% 0;
 
-            .pie__marca--img {
-                flex-grow: 1;
-                display: inline-block;
-                width: 21%;
-                margin: 0 3svh 0 0;
+            .pie__marca--cont {
+                @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0px);
 
-                img {
-                    width: 100%;
-                    object-fit: contain;
+                .pie__marca--img {
+                    flex-grow: 1;
+                    display: inline-block;
+                    width: 21%;
+                    margin: 0 3svh 0 0;
+
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
                 }
+
+                .pie__marca--txt {
+                    display: inline-block;
+                    flex-grow: 2;
+                    // text-align: right;
+
+                    .pie__marca--h1_01 {
+                        font-family: $fam_02;
+                        font-size: 12svw;
+                        // font-size: 9svw;
+                        font-weight: 100;
+                        color: map-get($color, "gris_05");
+                    }
+                    
+                    .pie__marca--h1_02 {
+                        font-family: $fam_01;
+                        font-size: 14.1svw;
+                        // font-size: 11.1svw;
+                        // letter-spacing: -1px;
+                        font-weight: 900;
+                        color: map-get($color, "gris_05");
+                    }
+
+                }
+
+
             }
 
-            .pie__marca--txt {
-                display: inline-block;
-                flex-grow: 2;
-                // text-align: right;
+            .pie__marca--redes {
+                @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-evenly, $flx_bx_gap: 39px);
+                margin: 5svh 0 0;
 
-                .pie__marca--h1_01 {
-                    font-family: $fam_02;
-                    font-size: 12svw;
-                    // font-size: 9svw;
-                    font-weight: 100;
-                    color: map-get($color, "gris_05");
-                }
-                  
-                .pie__marca--h1_02 {
-                    font-family: $fam_01;
-                    font-size: 14.1svw;
-                    // font-size: 11.1svw;
-                    // letter-spacing: -1px;
-                    font-weight: 900;
-                    color: map-get($color, "gris_05");
-                }
+                li {
+                    display: inline-block;
+                    cursor: pointer;
 
+                    svg {
+                        width: 7svh;
+                        height: 7svh;
+                        fill: map-get($color, "gris_05");
+                    }
+                }
             }
+            
         }
 
 

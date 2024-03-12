@@ -1012,39 +1012,58 @@ h1 {
   min-width: 90svw;
 }
 #contenedor #pie .pie__marca {
+  padding: 3px 5% 0;
+}
+#contenedor #pie .pie__marca .pie__marca--cont {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
   gap: 0px;
-  padding: 3px 5% 0;
 }
-#contenedor #pie .pie__marca .pie__marca--img {
+#contenedor #pie .pie__marca .pie__marca--cont .pie__marca--img {
   flex-grow: 1;
   display: inline-block;
   width: 21%;
   margin: 0 3svh 0 0;
 }
-#contenedor #pie .pie__marca .pie__marca--img img {
+#contenedor #pie .pie__marca .pie__marca--cont .pie__marca--img img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#contenedor #pie .pie__marca .pie__marca--txt {
+#contenedor #pie .pie__marca .pie__marca--cont .pie__marca--txt {
   display: inline-block;
   flex-grow: 2;
 }
-#contenedor #pie .pie__marca .pie__marca--txt .pie__marca--h1_01 {
+#contenedor #pie .pie__marca .pie__marca--cont .pie__marca--txt .pie__marca--h1_01 {
   font-family: "Antonio", sans-serif;
   font-size: 12svw;
   font-weight: 100;
   color: #ccc;
 }
-#contenedor #pie .pie__marca .pie__marca--txt .pie__marca--h1_02 {
+#contenedor #pie .pie__marca .pie__marca--cont .pie__marca--txt .pie__marca--h1_02 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 14.1svw;
   font-weight: 900;
   color: #ccc;
+}
+#contenedor #pie .pie__marca .pie__marca--redes {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 39px;
+  margin: 5svh 0 0;
+}
+#contenedor #pie .pie__marca .pie__marca--redes li {
+  display: inline-block;
+  cursor: pointer;
+}
+#contenedor #pie .pie__marca .pie__marca--redes li svg {
+  width: 7svh;
+  height: 7svh;
+  fill: #ccc;
 }
 
 @media only screen and (min-width: 481px) {
