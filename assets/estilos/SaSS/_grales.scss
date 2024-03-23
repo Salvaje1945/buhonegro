@@ -189,6 +189,12 @@ h1 {
   text-transform: uppercase;
 }
 
+.btn_03 {
+  @include btn__ok ($btn_ok-wth: 51px, $btn_ok-hgh: 35px, $btn_ok-pdd: 5px, $btn_ok-fntsz: 16px, $btn_ok-fntfam: $fam_02, $btn_ok-color: map-get($color, "blanco"), $btn_ok-fntwgh: 400, $btn_ok-bgc: map-get($color, "gris_03"), $btn_ok-brd: 1px solid map-get($color, "gris_03"), $btn_ok-hvrbgc: map-get($color, "rojo_04"));
+  border-left: 0;
+  margin-left: 0;
+}
+
 // .btn_01.no {
 //   display: none;
 // }

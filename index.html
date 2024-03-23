@@ -27,7 +27,17 @@
     <link rel="stylesheet" href="assets/estilos/SaSS/styles.css">
 </head>
 <body>
+    <div id="inicio"></div>
     <div id="contenedor">
+        <div class="contenedor__subir" id="contenedor-subir">
+            <div>
+                <a href="#inicio" id="accion-subir">
+                    <svg role="img">
+                        <use href="assets/img/iconos/iconos.svg#manito-arriba-01"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
         <header id="cabecera">
         </header>
         <main id="contenido">
@@ -171,43 +181,92 @@
             </section>
         </main>
         <footer id="pie">
-            <section class="pie__box" id="pie__marca">
-                <article class="pie__marca">
-                    <div class="pie__marca--cont">
-                        <div class="pie__marca--img">
-                            <img src="assets/img/buho-negro-fondo-gris.png" alt="BÚHO WAPPS DESARROLLOS" />
-                        </div>
-                        <div class="pie__marca--txt">
-                            <h1><span class="pie__marca--h1_01">BÚHO</span><span class="pie__marca--h1_02">WAPPS</span></h1>
-                        </div>
+            <!-- <section class="pie__presup" id="pie-presup">
+                <h3>CABECERA</h3>
+            </section> -->
+            <section class="pie__marca" id="pie-marca">
+                <div class="pie__marca--cont">
+                    <div class="pie__marca--img">
+                        <img src="assets/img/buho-negro-fondo-gris.png" alt="BÚHO WAPPS DESARROLLOS" />
                     </div>
-                    <ul class="pie__marca--redes">
+                    <div class="pie__marca--txt">
+                        <h1><span class="pie__marca--h1_01">BÚHO</span><span class="pie__marca--h1_02">WAPPS</span></h1>
+                    </div>
+                </div>
+                <ul class="pie__marca--redes">
+                    <li>
+                        <a>
+                            <svg role="img">
+                                <use href="assets/img/iconos/iconos.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <svg role="img">
+                                <use href="assets/img/iconos/iconos.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <svg role="img">
+                                <use href="assets/img/iconos/iconos.svg#xtwitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <svg role="img">
+                                <use href="assets/img/iconos/iconos.svg#github"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="pie__contactos" id="pie-contactos">
+                <h3 id="contactos-ancla">LISTA DE CORREO</h3>
+                <P>Suscríbete para recibir semanalmente las últimas novedades sobre mis charlas y seminarios.</P>
+                <form class="pie__contactos--form">
+                    <ul>
                         <li>
-                            <a>
-                                <svg role="img">
-                                    <use href="assets/img/iconos/iconos.svg#linkedin"></use>
-                                </svg>
-                            </a>
+                            <input type="email" class="pie__contactos--form_ipt" placeholder="Escriba su correo">
                         </li>
                         <li>
-                            <a>
-                                <svg role="img">
-                                    <use href="assets/img/iconos/iconos.svg#instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <svg role="img">
-                                    <use href="assets/img/iconos/iconos.svg#github"></use>
-                                </svg>
-                            </a>
+                            <input type="submit" class="btn_03" value="OK">
                         </li>
                     </ul>
-                </article>
+                </form>
+                <address class="pie__contactos--addrs">
+                    <h3>CONTÁCTENOS</h3>
+                    <ul>
+                        <li>
+                            <svg role="img">
+                                <use href="assets/img/iconos/iconos.svg#whatsapp"></use>
+                            </svg>
+                            <a href="https://api.whatsapp.com/send?phone=5491136990048" target="_blank" rel="noopener noreferrer">+54 9 11 4440 0694</a>
+                        </li>
+                        <li>
+                            <svg role="img">
+                                <use href="assets/img/iconos/iconos.svg#location"></use>
+                            </svg>
+                            <a href="https://maps.app.goo.gl/1MFuDVAi2NX7KveQ8" target="_blank" rel="noopener noreferrer">Núñez, BA, Argentina.</a>
+                        </li>
+                        <li>
+                            <svg role="img">
+                                <use href="assets/img/iconos/iconos.svg#sobre-reg"></use>
+                            </svg>
+                            <a href="mailto:info@buhowapps.com.ar?subject=Consulta desde el sitio web">info@buhowapps.com.ar</a>
+                        </li>
+                        <!-- <li>
+                            <svg role="img">
+                                <use href="assets/img/iconos/iconos.svg#google"></use>
+                            </svg>
+                            <a href="https://maps.app.goo.gl/1MFuDVAi2NX7KveQ8" target="_blank" rel="noopener noreferrer">Place holder</a>
+                        </li> -->
+                    </ul>
+                </address>
             </section>
-            <section class="pie__box"></section>
-            <section class="pie__box"></section>
         </footer>
     </div>
     <script src="assets/js/index.js" type="module"></script>

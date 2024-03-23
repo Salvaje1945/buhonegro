@@ -311,6 +311,27 @@ h1 {
   transition: 0.1s linear all;
 }
 
+.btn_03 {
+  width: 51px;
+  height: 35px;
+  padding: 5px;
+  font-size: 16px;
+  font-family: "Antonio", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  background-color: #666;
+  border: 1px solid #666;
+  transition: 0.5s linear all;
+  cursor: pointer;
+  border-left: 0;
+  margin-left: 0;
+}
+.btn_03:hover {
+  background-color: #740000;
+  transition: 0.5s linear all;
+}
+
 #contenedor {
   display: grid;
   grid-template-columns: 100%;
@@ -333,6 +354,35 @@ h1 {
   grid-area: pie;
 }
 
+#contenedor .contenedor__subir {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0;
+  position: fixed;
+  width: 9svh;
+  height: 9svh;
+  border-radius: 50%;
+  background-color: #dbdadf;
+  bottom: 2.65svh;
+  right: -100%;
+  transition: 0.3s ease all;
+  z-index: 999;
+  padding: 1svh 0 0;
+}
+#contenedor .contenedor__subir div {
+  display: inline-block;
+}
+#contenedor .contenedor__subir div svg {
+  width: 7svh;
+  height: 7svh;
+  fill: #740000;
+}
+#contenedor .contenedor__subir.activo {
+  right: 2.5%;
+  transition: 0.3s linear all;
+}
 #contenedor #cabecera .cabecera__movil {
   display: flex;
   flex-flow: row nowrap;
@@ -402,8 +452,12 @@ h1 {
   background-color: #333;
 }
 #contenedor #cabecera .cabecera__movil--menu .cabecera__movil--menu_cerrar {
-  display: block;
   text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3svh;
+  z-index: 998;
 }
 #contenedor #cabecera .cabecera__movil--menu .cabecera__movil--menu_cerrar button {
   background-color: transparent;
@@ -413,6 +467,9 @@ h1 {
   height: 5.31svh;
   fill: #fff;
 }
+#contenedor #cabecera .cabecera__movil--menu .cabecera__movil--menu_menu {
+  position: relative;
+}
 #contenedor #cabecera .cabecera__movil--menu .cabecera__movil--menu_menu ul {
   list-style: none;
   font-size: 9svh;
@@ -421,10 +478,11 @@ h1 {
   text-transform: uppercase;
   color: #f1f1f1;
   line-height: 1;
+  padding: 1.5svh 0 0;
 }
 #contenedor #cabecera .cabecera__movil--menu .cabecera__movil--menu_menu ul li {
   display: block;
-  padding: 2svh 0;
+  padding: 0 0 3svh;
 }
 #contenedor #cabecera .cabecera__movil--menu .cabecera__movil--menu_menu ul li a {
   color: #f1f1f1;
@@ -438,14 +496,15 @@ h1 {
   align-items: center;
   justify-content: space-evenly;
   gap: 0px;
+  padding: 1.5svh 0 0;
 }
 #contenedor #cabecera .cabecera__movil--menu .cabecera__movil--menu_menu ul li:last-child div {
   display: inline-block;
   cursor: pointer;
 }
 #contenedor #cabecera .cabecera__movil--menu .cabecera__movil--menu_menu ul li:last-child div svg {
-  width: 7svh;
-  height: 7svh;
+  width: 6svh;
+  height: 6svh;
   fill: #fff;
 }
 #contenedor #cabecera .cabecera__movil--menu.abierto {
@@ -1005,27 +1064,33 @@ h1 {
   justify-content: space-evenly;
   gap: 0px;
   background-color: #232323;
-  padding: 5svh 5% 3svh;
+  padding: 7svh 0 5svh;
 }
-#contenedor #pie .pie__box {
-  display: inline-block;
-  min-width: 90svw;
+#contenedor #pie .pie__marca,
+#contenedor #pie .pie__presup,
+#contenedor #pie .pie__contactos {
+  padding: 0 18.75px;
+  width: 375px;
 }
 #contenedor #pie .pie__marca {
-  padding: 3px 5% 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  margin: 0 0 7svh;
 }
 #contenedor #pie .pie__marca .pie__marca--cont {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 0px;
 }
 #contenedor #pie .pie__marca .pie__marca--cont .pie__marca--img {
-  flex-grow: 1;
   display: inline-block;
-  width: 21%;
-  margin: 0 3svh 0 0;
+  width: 91px;
+  margin: 0 0 1svh;
 }
 #contenedor #pie .pie__marca .pie__marca--cont .pie__marca--img img {
   width: 100%;
@@ -1034,17 +1099,17 @@ h1 {
 }
 #contenedor #pie .pie__marca .pie__marca--cont .pie__marca--txt {
   display: inline-block;
-  flex-grow: 2;
+  margin: 0 1.5svh 0 0;
 }
 #contenedor #pie .pie__marca .pie__marca--cont .pie__marca--txt .pie__marca--h1_01 {
   font-family: "Antonio", sans-serif;
-  font-size: 12svw;
+  font-size: 51.19px;
   font-weight: 100;
   color: #ccc;
 }
 #contenedor #pie .pie__marca .pie__marca--cont .pie__marca--txt .pie__marca--h1_02 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 14.1svw;
+  font-size: 60.37px;
   font-weight: 900;
   color: #ccc;
 }
@@ -1052,18 +1117,94 @@ h1 {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 39px;
-  margin: 5svh 0 0;
+  justify-content: space-between;
+  gap: 0px;
+  margin: 3svh 6% 0;
+  width: 90%;
 }
 #contenedor #pie .pie__marca .pie__marca--redes li {
   display: inline-block;
   cursor: pointer;
 }
 #contenedor #pie .pie__marca .pie__marca--redes li svg {
-  width: 7svh;
-  height: 7svh;
+  width: 6svh;
+  height: 6svh;
   fill: #ccc;
+}
+#contenedor #pie .pie__contactos {
+  display: inline-block;
+}
+#contenedor #pie .pie__contactos h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 33.75px;
+  font-weight: 500;
+  color: #ccc;
+  line-height: 1;
+  margin: 0 0 1svh;
+}
+#contenedor #pie .pie__contactos p {
+  font-family: "Urbanist", sans-serif;
+  font-size: 16.87px;
+  font-weight: 500;
+  color: #ccc;
+  margin: 0 0 2.25svh;
+}
+#contenedor #pie .pie__contactos .pie__contactos--form {
+  margin: 0 0 5svh;
+  width: 337.5px;
+}
+#contenedor #pie .pie__contactos .pie__contactos--form ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+#contenedor #pie .pie__contactos .pie__contactos--form ul li {
+  flex: auto;
+}
+#contenedor #pie .pie__contactos .pie__contactos--form .pie__contactos--form_ipt {
+  width: 287px;
+  border-right: 0;
+  height: 35px;
+  margin-right: 0;
+  font-family: "Urbanist", sans-serif;
+  color: #ccc;
+  font-size: 16px;
+  font-style: italic;
+  padding-left: 7px;
+  background-color: #333;
+  border: 1px solid #666;
+}
+#contenedor #pie .pie__contactos .pie__contactos--addrs ul {
+  margin: 3svh 0 0;
+  list-style: none;
+}
+#contenedor #pie .pie__contactos .pie__contactos--addrs ul li {
+  padding: 0 0 3svh;
+  font-family: "Urbanist", sans-serif;
+  color: #ccc;
+  font-size: 17.3px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2svh;
+}
+#contenedor #pie .pie__contactos .pie__contactos--addrs ul li svg {
+  width: 3svh;
+  height: 3svh;
+  fill: #fff;
+  display: inline-block;
+  text-align: center;
+}
+#contenedor #pie .pie__contactos .pie__contactos--addrs ul li svg:hover {
+  fill: #ff0000;
+}
+#contenedor #pie .pie__contactos .pie__contactos--addrs ul li a {
+  display: inline-block;
+  font-size: 17.3px;
+}
+#contenedor #pie .pie__contactos .pie__contactos--addrs ul li a:hover {
+  color: #ff0000;
 }
 
 @media only screen and (min-width: 481px) {
@@ -1086,6 +1227,12 @@ h1 {
   }
   #contenedor #cabecera .cabecera__movil .cabecera__movil--marca .cabecera__movil--marca_txt .h1__02 {
     font-size: 93.06px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  #contenedor #pie .pie__marca {
+    height: 52.75svh;
+    margin: 0;
   }
 }
 @media only screen and (min-width: 1024px) {

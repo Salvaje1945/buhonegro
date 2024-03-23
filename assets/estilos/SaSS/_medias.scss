@@ -79,6 +79,24 @@
 
 }
 
+@media only screen and (min-width: map-get($wth_res, "mob_07")) {
+
+    #contenedor {
+
+        #pie {
+
+            .pie__marca {
+                height: 52.75svh;
+                margin: 0;
+            }
+
+        }
+
+    }
+
+
+}
+
 @media only screen and (min-width: map-get($wth_res, "dkp_01")) {
 
     #contenedor {

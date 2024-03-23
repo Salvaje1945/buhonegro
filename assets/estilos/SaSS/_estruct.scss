@@ -35,6 +35,45 @@
 
 #contenedor {
 
+    .contenedor__subir {
+        @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-around, $flx_bx_gap: 0);
+        position: fixed;
+        // width: 38px;
+        // height: 38px;
+        width: 9svh;
+        height: 9svh;
+        border-radius: 50%;
+        // border: 1px solid map-get($color, "negro");
+        background-color: map-get($color, "gris_10");
+        bottom: 2.65svh;
+        right: -100%;
+        // padding: 3.65px 0.5px 0 0;
+        // box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.5);
+        transition: .3s ease all;
+        z-index: 999;
+        padding: 1svh 0 0;
+
+        div {
+            display: inline-block;
+            // font-size: 1.75rem;
+            // color: map-get($color, "gris_01");
+            // line-height: 5px !important;
+
+            svg {
+                width: 7svh;
+                height: 7svh;
+                fill: map-get($color, "rojo_04");
+                // stroke: map-get($color, "blanco");
+                // stroke-width: 11px;
+            }
+        }
+    }
+
+    .contenedor__subir.activo {
+        right: 2.5%;
+        transition: .3s linear all;
+    }
+
     #cabecera {
 
         // *** COMIENZO ESTILOS CABECERA RESOLUCIÓN MÓVILES ***
@@ -108,8 +147,13 @@
             background-color: map-get($color, "gris_01");
 
             .cabecera__movil--menu_cerrar {
-                display: block;
+                // display: block;
                 text-align: right;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 3svh;
+                z-index: 998;
 
                 button {
                     background-color: transparent;
@@ -125,6 +169,7 @@
             }
 
             .cabecera__movil--menu_menu {
+                position: relative;
 
                 ul {
                     list-style: none;
@@ -134,10 +179,11 @@
                     text-transform: uppercase;
                     color: map-get($color, "gris_17");
                     line-height: 1;
+                    padding: 1.5svh 0 0;
 
                     li {
                         display: block;
-                        padding: 2svh 0;
+                        padding: 0 0 3svh;
 
                         a {
                             color: map-get($color, "gris_17");
@@ -149,14 +195,15 @@
 
                         &:last-child {
                             @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-evenly, $flx_bx_gap: 0px);
+                            padding: 1.5svh 0 0;
 
                             div {
                                 display: inline-block;
                                 cursor: pointer;
 
                                 svg {
-                                    width: 7svh;
-                                    height: 7svh;
+                                    width: 6svh;
+                                    height: 6svh;
                                     fill: map-get($color, "blanco");
                                 }
 
@@ -942,25 +989,38 @@
     #pie {
         @include caja__flexible--edit ($flx_bx_ff: row wrap, $flx_bx_alit: flex-start, $flx_bx_juco: space-evenly, $flx_bx_gap: 0px);
         background-color: map-get($color, "gris_18");
-        padding: 5svh 5% 3svh;
+        padding: 7svh 0 5svh;
 
-        .pie__box {
-            display: inline-block;
-            min-width: 90svw;
-            
+        .pie__marca,
+        .pie__presup,
+        .pie__contactos {
+            // margin: 0 0 7svh;
+            padding: 0 18.75px;
+            //width: 90svw;
+            width: 375px;
         }
 
+        // .pie__presup {
+
+        // }
+
         .pie__marca {
-            padding: 3px 5% 0;
+            // display: inline-block;
+            @include caja__flexible--edit ($flx_bx_ff: column nowrap, $flx_bx_alit: center, $flx_bx_juco: center, $flx_bx_gap: 0px);
+            // height: 52.75svh;
+            // height: auto;
+            margin: 0 0 7svh;
 
             .pie__marca--cont {
-                @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0px);
+                @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-around, $flx_bx_gap: 0px);
+                //padding: 3px 0 0;
 
                 .pie__marca--img {
-                    flex-grow: 1;
+                    // flex-grow: 1;
                     display: inline-block;
-                    width: 21%;
-                    margin: 0 3svh 0 0;
+                    // width: 27%;
+                    width: 91px;
+                    margin: 0 0 1svh;
 
                     img {
                         width: 100%;
@@ -970,21 +1030,22 @@
 
                 .pie__marca--txt {
                     display: inline-block;
-                    flex-grow: 2;
+                    // flex-grow: 2;
                     // text-align: right;
+                    margin: 0 1.5svh 0 0;
 
                     .pie__marca--h1_01 {
                         font-family: $fam_02;
-                        font-size: 12svw;
-                        // font-size: 9svw;
+                        // font-size: 13.65svw;
+                        font-size: 51.19px;
                         font-weight: 100;
                         color: map-get($color, "gris_05");
                     }
                     
                     .pie__marca--h1_02 {
                         font-family: $fam_01;
-                        font-size: 14.1svw;
-                        // font-size: 11.1svw;
+                        // font-size: 16.1svw;
+                        font-size: 60.37px;
                         // letter-spacing: -1px;
                         font-weight: 900;
                         color: map-get($color, "gris_05");
@@ -996,16 +1057,17 @@
             }
 
             .pie__marca--redes {
-                @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-evenly, $flx_bx_gap: 39px);
-                margin: 5svh 0 0;
+                @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0px);
+                margin: 3svh 6% 0;
+                width: 90%;
 
                 li {
                     display: inline-block;
                     cursor: pointer;
 
                     svg {
-                        width: 7svh;
-                        height: 7svh;
+                        width: 6svh;
+                        height: 6svh;
                         fill: map-get($color, "gris_05");
                     }
                 }
@@ -1013,8 +1075,133 @@
             
         }
 
+        .pie__contactos {
+            display: inline-block;
 
+            h3 {
+                font-family: $fam_01;
+                // font-size: 9svw;
+                font-size: 33.75px;
+                font-weight: 500;
+                color: map-get($color, "gris_05");
+                line-height: 1;
+                margin: 0 0 1svh;
+            }
 
+            p {
+                font-family: $fam_03;
+                // font-size: 4.5svw;
+                font-size: 16.87px;
+                font-weight: 500;
+                color: map-get($color, "gris_05");
+                margin: 0 0 2.25svh;
+            }
+
+            .pie__contactos--form {
+                //margin: 1.5svh 0 10px 0;
+                // padding: 0;
+                margin: 0 0 5svh;
+                width: 337.5px;
+            
+                ul {
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+            
+                    li {
+                        flex: auto;
+                    }
+                }
+
+                .pie__contactos--form_ipt {
+                    width: 287px;
+                    border-right: 0;
+                    height: 35px;
+                    margin-right: 0;
+                    font-family: $fam_03;
+                    color: map-get($color, "gris_05");
+                    font-size: 16px;
+                    font-style: italic;
+                    padding-left: 7px;
+                    background-color: map-get($color, "gris_01");
+                    border: 1px solid map-get($color, "gris_03");
+                }
+
+            }
+
+            .pie__contactos--addrs {
+
+                ul {
+                    // padding: 0;
+                    margin: 3svh 0 0;
+                    list-style: none;
+            
+                    li {
+                        padding: 0 0 3svh;
+                        font-family: $fam_03;
+                        color: map-get($color, "gris_05");
+                        // font-size: 2.5svh;
+                        font-size: 17.3px;
+                        @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: flex-start, $flx_bx_gap: 2svh);
+
+                        svg {
+                            width: 3svh;
+                            height: 3svh;
+                            fill: map-get($color, "blanco");
+                            display: inline-block;
+                            text-align: center;
+
+                            &:hover {
+                                fill: map-get($color, "rojo_01");
+                            }
+
+                        }
+            
+                        a {
+                            display: inline-block;
+                            // font-size: 2.5svh;
+                            font-size: 17.3px;
+
+                            &:hover {
+                                color: map-get($color, "rojo_01");
+                            }
+
+                        }
+
+                    }
+            
+                    // i {
+                    //     margin-right: 10px;
+                    //     width: 16px;
+                    //     color: map-get($color, "blanco");
+                    //     font-size: 16px;
+                    //     text-align: center;
+                    // }
+            
+                    // a {
+                    //     font-size: 16px;
+            
+                    //     &:hover {
+                    //         color: map-get($color, "rojo_04");
+                    //     }
+                    // }
+                }
+            }
+            
+            
+            
+            // .footer__links--box--btn {
+            //     width: map-get($abs_lng, "50px") + map-get($abs_lng, "1px");
+            //     height: map-get($abs_lng, "5px") * 7;
+            //     padding: map-get($abs_lng, "5px");
+            //     border-left: map-get($num_int, "0");
+            //     margin-left: map-get($num_int, "0");
+            //     @include btn-fx_edit ($fnt_sz: map-get($rel_lng, "1"));
+            // }
+            
+        }
+
+        
     }
 
 }

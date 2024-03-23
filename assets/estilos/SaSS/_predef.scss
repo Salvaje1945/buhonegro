@@ -177,6 +177,42 @@
     // }
 }
 
+// .btn-fx {
+//     font-family: $fam_02;
+//     color: map-get($color, "blanco");
+//     font-weight: map-get($glob_kw, "norm");
+//     text-align: map-get($pos, "ctr");
+//     background-color: map-get($color, "gris_03");
+//     border: map-get($abs_lng, "1px") $solid map-get($color, "gris_03");
+//     transition: map-get($times, "m_seg");
+//     cursor: $cursor;
+
+//     &:hover {
+//         background-color: map-get($color, "azul");
+//         transition: map-get($times, "m_seg");
+//     }
+// }
+
+@mixin btn__ok ($btn_ok-wth: 51px, $btn_ok-hgh: 35px, $btn_ok-pdd: 5px, $btn_ok-fntsz: 16px, $btn_ok-fntfam: $fam_03, $btn_ok-color: map-get($color, "blanco"), $btn_ok-fntwgh: 400, $btn_ok-bgc: map-get($color, "gris_03"), $btn_ok-brd: 1px solid map-get($color, "gris_03"), $btn_ok-hvrbgc: map-get($color, "rojo_04")) {
+    width: $btn_ok-wth;
+    height: $btn_ok-hgh;
+    padding: $btn_ok-pdd;
+    font-size: $btn_ok-fntsz;
+    font-family: $btn_ok-fntfam;
+    color: $btn_ok-color;
+    font-weight: $btn_ok-fntwgh;
+    text-align: center;
+    background-color: $btn_ok-bgc;
+    border: $btn_ok-brd;
+    transition: .5s linear all;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $btn_ok-hvrbgc;
+        transition: .5s linear all;
+    }
+}
+
 // Cajas hijas
 /*
 .cabeza__extremos {

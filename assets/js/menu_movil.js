@@ -18,7 +18,17 @@ export default function menuMovil() {
 
     const proyectos = $('#menu-mov-proyectos')
 
-    const pie = $('#menu-mov-contacto')
+    const contactenos = $('#menu-mov-contacto')
+
+    function mostrarBotonSubir() {
+        $('#contenedor-subir').classList.add('activo')
+        
+        function cerrarBotonSubir() {
+            $('#contenedor-subir').classList.remove('activo')
+        }
+
+        $('#accion-subir').onclick = cerrarBotonSubir
+    }
 
     
 
@@ -38,17 +48,35 @@ export default function menuMovil() {
 
     menuCerrar.addEventListener('click', cerrarMenu)
 
-    inicio.addEventListener('click', cerrarMenu)
+    inicio.addEventListener('click', ()=> {
+        cerrarMenu()
+        mostrarBotonSubir()
+    })
 
-    nosotros.addEventListener('click', cerrarMenu)
+    nosotros.addEventListener('click', ()=> {
+        cerrarMenu()
+        mostrarBotonSubir()
+    })
 
-    servicios.addEventListener('click', cerrarMenu)
+    servicios.addEventListener('click', ()=> {
+        cerrarMenu()
+        mostrarBotonSubir()
+    })
 
-    portfolio.addEventListener('click', cerrarMenu)
+    portfolio.addEventListener('click', ()=> {
+        cerrarMenu()
+        mostrarBotonSubir()
+    })
 
-    proyectos.addEventListener('click', cerrarMenu)
+    proyectos.addEventListener('click', ()=> {
+        cerrarMenu()
+        mostrarBotonSubir()
+    })
 
-    pie.addEventListener('click', cerrarMenu)
+    contactenos.addEventListener('click', ()=> {
+        cerrarMenu()
+        mostrarBotonSubir()
+    })
 
 
 }

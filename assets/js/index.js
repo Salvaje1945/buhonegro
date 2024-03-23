@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
                     <li><a href="#contenido-servicios" id="menu-mov-servicios">Servicios</a></li>
                     <li><a href="#contenido-portfolio" id="menu-mov-portfolio">Portfolio</a></li>
                     <li><a href="#carrousel-proyectos" id="menu-mov-proyectos">Proyectos</a></li>
-                    <li><a href="#pie" id="menu-mov-contacto">Contáctenos</a></li>
+                    <li><a href="#pie" id="menu-mov-presup">Presupueste</a></li>
+                    <li><a href="#contactos-ancla" id="menu-mov-contacto">Contáctenos</a></li>
                     <li>
                         <div>
                             <a>
@@ -58,6 +59,13 @@ document.addEventListener('DOMContentLoaded', ()=> {
                             <a>
                                 <svg role="img">
                                     <use href="assets/img/iconos/iconos.svg#instagram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a>
+                                <svg role="img">
+                                    <use href="assets/img/iconos/iconos.svg#xtwitter"></use>
                                 </svg>
                             </a>
                         </div>
