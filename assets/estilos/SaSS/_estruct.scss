@@ -35,23 +35,21 @@
 
 #contenedor {
 
-    .contenedor__subir {
+    .contenedor__subir,
+    .contenedor__whatsapp,
+    .contenedor__telegram {
         @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-around, $flx_bx_gap: 0);
         position: fixed;
         // width: 38px;
         // height: 38px;
-        width: 9svh;
-        height: 9svh;
+        // width: 9svh;
+        // height: 9svh;
         border-radius: 50%;
         // border: 1px solid map-get($color, "negro");
-        background-color: map-get($color, "gris_10");
-        bottom: 2.65svh;
-        right: -100%;
+        // background-color: map-get($color, "gris_10");
         // padding: 3.65px 0.5px 0 0;
         // box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.5);
-        transition: .3s ease all;
         z-index: 999;
-        padding: 1svh 0 0;
 
         div {
             display: inline-block;
@@ -62,11 +60,89 @@
             svg {
                 width: 7svh;
                 height: 7svh;
+                // fill: map-get($color, "rojo_04");
+                // stroke: map-get($color, "blanco");
+                // stroke-width: 11px;
+            }
+        }
+    }
+
+    .contenedor__subir {
+        width: 9svh;
+        height: 9svh;
+        background-color: map-get($color, "gris_10");
+        bottom: 2.65svh;
+        right: -100%;
+        padding: 1svh 0 0;
+        transition: .3s ease all;
+
+        div {
+            // display: inline-block;
+            // font-size: 1.75rem;
+            // color: map-get($color, "gris_01");
+            // line-height: 5px !important;
+
+            svg {
+                // width: 7svh;
+                // height: 7svh;
                 fill: map-get($color, "rojo_04");
                 // stroke: map-get($color, "blanco");
                 // stroke-width: 11px;
             }
         }
+
+    }
+
+    .contenedor__whatsapp {
+        width: 10.5svh;
+        height: 10.5svh;
+        background-color: map-get($color, "verde_04");
+        // bottom: 12.65svh;
+        bottom: 39.5svh;
+        right: 2.5%;
+        padding: 0.9svh 0 0.5svh 0.78svh;
+
+        div {
+            // display: inline-block;
+            // font-size: 1.75rem;
+            // color: map-get($color, "gris_01");
+            // line-height: 5px !important;
+
+            svg {
+                // width: 7svh;
+                // height: 7svh;
+                fill: map-get($color, "blanco");
+                stroke: map-get($color, "blanco");
+                stroke-width: 16px;
+            }
+        }
+
+    }
+
+    .contenedor__telegram {
+        width: 10.5svh;
+        height: 10.5svh;
+        background-color: map-get($color, "gris_03");
+        // bottom: 12.65svh;
+        bottom: 27svh;
+        right: 2.5%;
+        padding: 1.74svh 0 0.5svh 0.544svh;
+
+        div {
+            // display: inline-block;
+            // font-size: 1.75rem;
+            // color: map-get($color, "gris_01");
+            // line-height: 5px !important;
+
+            svg {
+                width: 7.5svh;
+                height: 7.5svh;
+                fill: map-get($color, "celeste_01");
+                stroke: map-get($color, "celeste_01");
+                stroke-width: 16px;
+            }
+        }
+
     }
 
     .contenedor__subir.activo {

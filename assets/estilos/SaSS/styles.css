@@ -354,30 +354,68 @@ h1 {
   grid-area: pie;
 }
 
-#contenedor .contenedor__subir {
+#contenedor .contenedor__subir,
+#contenedor .contenedor__whatsapp,
+#contenedor .contenedor__telegram {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-around;
   gap: 0;
   position: fixed;
+  border-radius: 50%;
+  z-index: 999;
+}
+#contenedor .contenedor__subir div,
+#contenedor .contenedor__whatsapp div,
+#contenedor .contenedor__telegram div {
+  display: inline-block;
+}
+#contenedor .contenedor__subir div svg,
+#contenedor .contenedor__whatsapp div svg,
+#contenedor .contenedor__telegram div svg {
+  width: 7svh;
+  height: 7svh;
+}
+#contenedor .contenedor__subir {
   width: 9svh;
   height: 9svh;
-  border-radius: 50%;
   background-color: #dbdadf;
   bottom: 2.65svh;
   right: -100%;
-  transition: 0.3s ease all;
-  z-index: 999;
   padding: 1svh 0 0;
-}
-#contenedor .contenedor__subir div {
-  display: inline-block;
+  transition: 0.3s ease all;
 }
 #contenedor .contenedor__subir div svg {
-  width: 7svh;
-  height: 7svh;
   fill: #740000;
+}
+#contenedor .contenedor__whatsapp {
+  width: 10.5svh;
+  height: 10.5svh;
+  background-color: #14a341;
+  bottom: 39.5svh;
+  right: 2.5%;
+  padding: 0.9svh 0 0.5svh 0.78svh;
+}
+#contenedor .contenedor__whatsapp div svg {
+  fill: #fff;
+  stroke: #fff;
+  stroke-width: 16px;
+}
+#contenedor .contenedor__telegram {
+  width: 10.5svh;
+  height: 10.5svh;
+  background-color: #666;
+  bottom: 27svh;
+  right: 2.5%;
+  padding: 1.74svh 0 0.5svh 0.544svh;
+}
+#contenedor .contenedor__telegram div svg {
+  width: 7.5svh;
+  height: 7.5svh;
+  fill: #4cb5f5;
+  stroke: #4cb5f5;
+  stroke-width: 16px;
 }
 #contenedor .contenedor__subir.activo {
   right: 2.5%;
