@@ -275,6 +275,7 @@ h1 {
   font-weight: 700;
   text-align: center;
   transition: 0.1s linear all;
+  cursor: pointer;
   line-height: 1;
   margin: 0 auto;
   text-transform: uppercase;
@@ -301,6 +302,7 @@ h1 {
   font-weight: 700;
   text-align: center;
   transition: 0.1s linear all;
+  cursor: pointer;
   line-height: 1;
   margin: 4svh auto 0;
   text-transform: uppercase;
@@ -371,23 +373,19 @@ h1 {
 #contenedor .contenedor__telegram div {
   display: inline-block;
 }
-#contenedor .contenedor__subir div svg,
-#contenedor .contenedor__whatsapp div svg,
-#contenedor .contenedor__telegram div svg {
-  width: 7svh;
-  height: 7svh;
-}
 #contenedor .contenedor__subir {
-  width: 9svh;
-  height: 9svh;
-  background-color: #dbdadf;
+  width: 7.5svh;
+  height: 7.5svh;
+  background-color: #960101;
   bottom: 2.65svh;
   right: -100%;
-  padding: 1svh 0 0;
+  padding: 1svh 0 0 0.4025svh;
   transition: 0.3s ease all;
 }
 #contenedor .contenedor__subir div svg {
-  fill: #740000;
+  width: 5svh;
+  height: 5svh;
+  fill: #f9f5f4;
 }
 #contenedor .contenedor__whatsapp {
   width: 10.5svh;
@@ -395,9 +393,11 @@ h1 {
   background-color: #14a341;
   bottom: 39.5svh;
   right: 2.5%;
-  padding: 0.9svh 0 0.5svh 0.78svh;
+  padding: 1.65svh 0 0.5svh 0.35svh;
 }
 #contenedor .contenedor__whatsapp div svg {
+  width: 7svh;
+  height: 7svh;
   fill: #fff;
   stroke: #fff;
   stroke-width: 16px;
@@ -405,10 +405,10 @@ h1 {
 #contenedor .contenedor__telegram {
   width: 10.5svh;
   height: 10.5svh;
-  background-color: #666;
+  background-color: #444;
   bottom: 27svh;
   right: 2.5%;
-  padding: 1.74svh 0 0.5svh 0.544svh;
+  padding: 0.9svh 0 0 0.3svh;
 }
 #contenedor .contenedor__telegram div svg {
   width: 7.5svh;
@@ -420,6 +420,161 @@ h1 {
 #contenedor .contenedor__subir.activo {
   right: 2.5%;
   transition: 0.3s linear all;
+}
+#contenedor .cabeza__iconos {
+  display: block;
+  font-size: 4.05svh;
+  color: #000;
+  height: 28px;
+}
+#contenedor .cabeza__iconos.cerrar {
+  margin: 0 15px 20px;
+  font-size: 3.93svh;
+}
+#contenedor .cabeza__anun--cont {
+  width: 100svw;
+  height: 100svh;
+  position: fixed;
+  transition: 0.5s;
+  z-index: 999;
+  padding: 0;
+  right: -100%;
+  top: 0;
+  background-color: #faf6f3;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_cbz {
+  background-color: #fff;
+  display: block;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_cbz .cabeza__anun--cont_cbz-menu {
+  display: flex;
+  margin-top: 25px;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_cbz .cabeza__anun--cont_cbz-menu .cabeza__anun--cont_cbz-btn {
+  display: inline-block;
+  width: 50svw;
+  height: 5.95svh;
+  padding: 9px 0;
+  text-align: center;
+  font-family: "Urbanist", sans-serif;
+  font-size: 2.54svh;
+  color: #000;
+  font-weight: 600;
+  line-height: 1.4;
+  /*&:active {
+      background-color: map-get($color, "gris_03");
+  }*/
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_cbz .cabeza__anun--cont_cbz-menu .cabeza__anun--cont_cbz-btn:hover {
+  -webkit-animation: clic 0.7s forwards;
+          animation: clic 0.7s forwards;
+}
+@-webkit-keyframes clic {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #ccc;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes clic {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #ccc;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_cbz .cabeza__anun--cont_bdr {
+  display: block;
+  width: 100svw;
+  height: 2px;
+  background-color: #ccc;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_cbz .cabeza__anun--cont_bdr .cabeza__anun--cont_bdr-anim {
+  display: block;
+  width: 50svw;
+  height: 2px;
+  background-color: #333;
+  transition: 0.2s all;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_cbz .cabeza__anun--cont_bdr .cabeza__anun--cont_bdr-anim.novedades {
+  margin-right: 50svw;
+  margin-left: 0;
+  transition: 0.2s all;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_cbz .cabeza__anun--cont_bdr .cabeza__anun--cont_bdr-anim.promociones {
+  margin-left: 50svw;
+  margin-right: 0;
+  transition: 0.2s all;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_info {
+  display: none;
+  width: 100svw;
+  height: auto;
+  transition: 0.5s all;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_info.activo {
+  display: block;
+  transition: 0.5s all;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_info-cont {
+  display: block;
+  width: 100%;
+  padding: 7svh 9svw 0;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_info-cont .cabeza__anun--cont_info-cont_box {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 2.5svh 6.5svw;
+  margin: 0 0 5svh;
+  /*border-top: 0;
+  border-left: 1px;
+  border-right: 1px;
+  border-bottom: 1px;
+  border-style: outset;
+  border-color: map-get($color, "gris_07");*/
+  border: 1px groove #e3e3e1;
+  border-top: none;
+  border-radius: 3px;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_info-cont .cabeza__anun--cont_info-cont_box h1 {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.96svh;
+  font-weight: 600;
+  color: #000;
+  text-align: left;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_info-cont .cabeza__anun--cont_info-cont_box h2 {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.62svh;
+  font-weight: normal;
+  color: #333;
+  text-align: left;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_info-cont .cabeza__anun--cont_info-cont_box p {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.62svh;
+  font-weight: 600;
+  color: #000;
+  text-align: right;
+  margin-top: 5px;
+}
+#contenedor .cabeza__anun--cont .cabeza__anun--cont_info-cont .cabeza__anun--cont_info-cont_box p span {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.27svh;
+  color: #000;
+  margin-left: 3px;
+}
+#contenedor .cabeza__anun--cont.activo {
+  right: 0;
 }
 #contenedor #cabecera .cabecera__movil {
   display: flex;
@@ -835,6 +990,8 @@ h1 {
   align-items: flex-start;
   justify-content: space-evenly;
   gap: 0px;
+  height: 150.63svh;
+  overflow: hidden;
 }
 #contenedor #contenido .contenido__info .contenido__info--servicios .contenido__info--servicios_cont .info__servicios--cont_cont .info__servicios--cont_box {
   display: inline-block;
@@ -964,6 +1121,8 @@ h1 {
   padding: 5svh 0 7svh;
   margin: 1px 0 0;
   background-color: #740000;
+  height: 100.6svh;
+  overflow: hidden;
 }
 #contenedor #contenido .contenido__info .contenido__info--proyectos h3 {
   font-family: "Bebas Neue", sans-serif;

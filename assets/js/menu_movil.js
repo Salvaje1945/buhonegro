@@ -18,6 +18,8 @@ export default function menuMovil() {
 
     const proyectos = $('#menu-mov-proyectos')
 
+    const presupuestar = $('#menu-mov-presup')
+
     const contactenos = $('#menu-mov-contacto')
 
     function mostrarBotonSubir() {
@@ -73,10 +75,49 @@ export default function menuMovil() {
         mostrarBotonSubir()
     })
 
+    presupuestar.addEventListener('click', ()=> {
+        cerrarMenu()
+        // mostrarBotonSubir()
+        abrirMenuAnun()
+
+    })
+
     contactenos.addEventListener('click', ()=> {
         cerrarMenu()
         mostrarBotonSubir()
     })
+
+    function abrirMenuAnun () {
+        $('#cabeza__anun').classList.add('activo')
+        anunNove()
+    }
+    
+    function cerrarMenuAnun () {
+        $('#cabeza__anun').classList.remove('activo')  
+    }
+    
+    function anunNove () {
+        if($('#cabeza__anun--prom_info').classList.contains('activo') && $('#cabeza__anun--btn_anim').classList.contains('promociones')){
+            $('#cabeza__anun--prom_info').classList.remove('activo')
+            $('#cabeza__anun--nove_info').classList.add('activo')
+            $('#cabeza__anun--btn_anim').classList.remove('promociones')
+            $('#cabeza__anun--btn_anim').classList.add('novedades')
+        }
+    }
+    
+    function anunProm () {
+        if($('#cabeza__anun--nove_info').classList.contains('activo') && $('#cabeza__anun--btn_anim').classList.contains('novedades')){
+            $('#cabeza__anun--nove_info').classList.remove('activo')
+            $('#cabeza__anun--prom_info').classList.add('activo')
+            $('#cabeza__anun--btn_anim').classList.remove('novedades')
+            $('#cabeza__anun--btn_anim').classList.add('promociones')
+        }
+    }
+
+    $('#cabeza__anun--cer').onclick = cerrarMenuAnun
+    $('#cabeza__anun--prom').onclick = anunProm
+    //$('#cabeza__anun--btn').onclick = abrirMenuAnun
+    $('#cabeza__anun--nove').onclick = anunNove
 
 
 }

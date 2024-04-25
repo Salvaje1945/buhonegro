@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
                     <li><a href="#contenido-info" id="menu-mov-nosotros">Nosotros</a></li>
                     <li><a href="#contenido-servicios" id="menu-mov-servicios">Servicios</a></li>
                     <li><a href="#contenido-portfolio" id="menu-mov-portfolio">Portfolio</a></li>
-                    <li><a href="#carrousel-proyectos" id="menu-mov-proyectos">Proyectos</a></li>
-                    <li><a href="#pie" id="menu-mov-presup">Presupueste</a></li>
-                    <li><a href="#contactos-ancla" id="menu-mov-contacto">Contáctenos</a></li>
+                    <li><a href="#contenido-proyectos" id="menu-mov-proyectos">Proyectos</a></li>
+                    <li><a href="#" id="menu-mov-presup">Presupueste</a></li>
+                    <li><a href="#pie" id="menu-mov-contacto">Contáctenos</a></li>
                     <li>
                         <div>
                             <a>
@@ -110,7 +110,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
     listaPortfolio()
 
     mostrarLosProyectos('#contenido-proyectos', '(min-width: 1024px)',
-        `<h3 id="contenido-info-proyectos-titulo">Proyectos</h3>
+        `<div id="proyectos-ancla"></div>
+        <h3 id="contenido-info-proyectos-titulo">Proyectos</h3>
         <div id="carrousel-proyectos">
             <div id="proy-gal_mov">
                 <div class="proy__gal--mov_img-gde-cont">

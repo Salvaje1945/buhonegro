@@ -57,24 +57,25 @@
             // color: map-get($color, "gris_01");
             // line-height: 5px !important;
 
-            svg {
-                width: 7svh;
-                height: 7svh;
-                // fill: map-get($color, "rojo_04");
-                // stroke: map-get($color, "blanco");
-                // stroke-width: 11px;
-            }
+            // svg {
+            //     width: 7svh;
+            //     height: 7svh;
+            //     // fill: map-get($color, "rojo_04");
+            //     // stroke: map-get($color, "blanco");
+            //     // stroke-width: 11px;
+            // }
         }
     }
 
     .contenedor__subir {
-        width: 9svh;
-        height: 9svh;
-        background-color: map-get($color, "gris_10");
+        width: 7.5svh;
+        height: 7.5svh;
+        background-color: map-get($color, "rojo_03");
         bottom: 2.65svh;
         right: -100%;
-        padding: 1svh 0 0;
+        padding: 1svh 0 0 0.4025svh;
         transition: .3s ease all;
+        // border: 2px solid map-get($color, "gris_18");
 
         div {
             // display: inline-block;
@@ -83,9 +84,10 @@
             // line-height: 5px !important;
 
             svg {
-                // width: 7svh;
-                // height: 7svh;
-                fill: map-get($color, "rojo_04");
+                width: 5svh;
+                height: 5svh;
+                fill: map-get($color, "gris_11");
+                // fill-rule:evenodd;
                 // stroke: map-get($color, "blanco");
                 // stroke-width: 11px;
             }
@@ -100,7 +102,7 @@
         // bottom: 12.65svh;
         bottom: 39.5svh;
         right: 2.5%;
-        padding: 0.9svh 0 0.5svh 0.78svh;
+        padding: 1.65svh 0 0.5svh 0.35svh;
 
         div {
             // display: inline-block;
@@ -109,8 +111,8 @@
             // line-height: 5px !important;
 
             svg {
-                // width: 7svh;
-                // height: 7svh;
+                width: 7svh;
+                height: 7svh;
                 fill: map-get($color, "blanco");
                 stroke: map-get($color, "blanco");
                 stroke-width: 16px;
@@ -122,11 +124,11 @@
     .contenedor__telegram {
         width: 10.5svh;
         height: 10.5svh;
-        background-color: map-get($color, "gris_03");
+        background-color: map-get($color, "gris_02");
         // bottom: 12.65svh;
         bottom: 27svh;
         right: 2.5%;
-        padding: 1.74svh 0 0.5svh 0.544svh;
+        padding: 0.9svh 0 0 0.3svh;
 
         div {
             // display: inline-block;
@@ -150,9 +152,335 @@
         transition: .3s linear all;
     }
 
+    .cabeza__iconos {
+        display: block;
+        font-size: 4.05svh;
+        color: map-get($color, "negro");
+        //cursor: pointer;
+        height: 28px;
+    }
+
+    .cabeza__iconos.cerrar {
+        margin: 0 15px 20px;
+        font-size: 3.93svh;
+    }
+
+    .cabeza__anun--cont {
+        @include cabeza__desplegables--edit ($cbz_dsp-wth: 100svw, $cbz_dsp-hgt: 100svh, $cbz_dsp-pdd: 0);
+        right: -100%;
+        top: 0;
+        background-color: map-get($color, "gris_12");
+
+        .cabeza__anun--cont_cbz {
+            background-color: map-get($color, "blanco");
+            display: block;
+
+            .cabeza__anun--cont_cbz-menu {
+                display: flex;
+                margin-top: 25px;
+
+                .cabeza__anun--cont_cbz-btn {
+                    display: inline-block;
+                    width: 50svw;
+                    height: 5.95svh;
+                    padding: 9px 0;
+                    text-align: center;
+                    font-family: $fam_03;
+                    font-size: 2.54svh;
+                    color: map-get($color, "negro");
+                    font-weight: 600;
+                    line-height: 1.4;
+                    //transition: .5s all;
+    
+                    /*&:active {
+                        background-color: map-get($color, "gris_03");
+                    }*/
+                    &:hover {
+                        //background-color: map-get($color, "gris_03");
+                        animation: clic .7s forwards;
+
+                        @keyframes clic {
+                            0% {
+                                background-color: transparent;
+                            }
+                            50% {
+                                background-color: map-get($color, "gris_05");
+                            }
+                            100% {
+                                background-color: transparent;
+                            }
+                            
+                        }
+                    }
+    
+                }
+    
+            }
+
+            .cabeza__anun--cont_bdr {
+                display: block;
+                width: 100svw;
+                height: 2px;
+                background-color: map-get($color, "gris_05");
+
+                .cabeza__anun--cont_bdr-anim {
+                    display: block;
+                    width: 50svw;
+                    height: 2px;
+                    background-color: map-get($color, "gris_01");
+                    //margin-right: 50svh;
+                    transition: .2s all;
+                }
+
+                .cabeza__anun--cont_bdr-anim.novedades {
+                    margin-right: 50svw;
+                    margin-left: 0;
+                    transition: .2s all;
+                }
+    
+                .cabeza__anun--cont_bdr-anim.promociones {
+                    margin-left: 50svw;
+                    margin-right: 0;
+                    transition: .2s all;
+                }
+
+            }   
+            
+        }
+
+        .cabeza__anun--cont_info {
+            display: none;
+            width: 100svw;
+            height: auto;
+            transition: .5s all;
+        }
+
+        .cabeza__anun--cont_info.activo {
+            display: block;
+            transition: .5s all;
+        }
+
+        .cabeza__anun--cont_info-cont {
+            display: block;
+            width: 100%;
+            padding: 7svh 9svw 0;
+
+            .cabeza__anun--cont_info-cont_box {
+                width: 100%;
+                height: auto;
+                background-color: map-get($color, "blanco");
+                padding: 2.5svh 6.5svw;
+                margin: 0 0 5svh;
+                /*border-top: 0;
+                border-left: 1px;
+                border-right: 1px;
+                border-bottom: 1px;
+                border-style: outset;
+                border-color: map-get($color, "gris_07");*/
+                border: 1px groove map-get($color, "gris_14");
+                border-top: none;
+                border-radius: 3px;
+
+                h1 {
+                    font-family: $fam_03;
+                    font-size: 1.96svh;
+                    font-weight: 600;
+                    color: map-get($color, "negro");
+                    text-align: left;
+                }
+
+                h2 {
+                    font-family: $fam_03;
+                    font-size: 1.62svh;
+                    font-weight: normal;
+                    color: map-get($color, "gris_01");
+                    text-align: left;
+                }
+
+                p {
+                    font-family: $fam_03;
+                    font-size: 1.62svh;
+                    font-weight: 600;
+                    color: map-get($color, "negro");
+                    text-align: right;
+                    margin-top: 5px;
+
+                    span {
+                        font-family: $fam_03;
+                        font-size: 1.27svh;
+                        color: map-get($color, "negro");
+                        margin-left: 3px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .cabeza__anun--cont.activo {
+        right: 0;
+    }
+
     #cabecera {
 
         // *** COMIENZO ESTILOS CABECERA RESOLUCIÓN MÓVILES ***
+
+        // .cabeza__anun--cont {
+        //     @include cabeza__desplegables--edit ($cbz_dsp-wth: 100vw, $cbz_dsp-hgt: 100vh, $cbz_dsp-pdd: 0);
+        //     right: -100%;
+        //     top: 0;
+        //     background-color: map-get($color, "gris_12");
+
+        //     .cabeza__anun--cont_cbz {
+        //         background-color: map-get($color, "blanco");
+        //         display: block;
+
+        //         .cabeza__anun--cont_cbz-menu {
+        //             display: flex;
+        //             margin-top: 25px;
+
+        //             .cabeza__anun--cont_cbz-btn {
+        //                 display: inline-block;
+        //                 width: 50vw;
+        //                 height: 5.95svh;
+        //                 padding: 9px 0;
+        //                 text-align: center;
+        //                 font-family: $fnt_01;
+        //                 font-size: 1.1rem;
+        //                 color: map-get($color, "negro");
+        //                 font-weight: 600;
+        //                 line-height: 1.4;
+        //                 //transition: .5s all;
+        
+        //                 /*&:active {
+        //                     background-color: map-get($color, "gris_03");
+        //                 }*/
+        //                 &:hover {
+        //                     //background-color: map-get($color, "gris_03");
+        //                     animation: clic .7s forwards;
+
+        //                     @keyframes clic {
+        //                         0% {
+        //                             background-color: transparent;
+        //                         }
+        //                         50% {
+        //                             background-color: map-get($color, "gris_05");
+        //                         }
+        //                         100% {
+        //                             background-color: transparent;
+        //                         }
+                                
+        //                     }
+        //                 }
+        
+        //             }
+        
+        //         }
+
+        //         .cabeza__anun--cont_bdr {
+        //             display: block;
+        //             width: 100vw;
+        //             height: 2px;
+        //             background-color: map-get($color, "gris_05");
+
+        //             .cabeza__anun--cont_bdr-anim {
+        //                 display: block;
+        //                 width: 50vw;
+        //                 height: 2px;
+        //                 background-color: map-get($color, "gris_01");
+        //                 //margin-right: 50svh;
+        //                 transition: .2s all;
+        //             }
+    
+        //             .cabeza__anun--cont_bdr-anim.novedades {
+        //                 margin-right: 50vw;
+        //                 margin-left: 0;
+        //                 transition: .2s all;
+        //             }
+        
+        //             .cabeza__anun--cont_bdr-anim.promociones {
+        //                 margin-left: 50vw;
+        //                 margin-right: 0;
+        //                 transition: .2s all;
+        //             }
+
+        //         }   
+                
+        //     }
+
+        //     .cabeza__anun--cont_info {
+        //         display: none;
+        //         width: 100vw;
+        //         height: auto;
+        //         transition: .5s all;
+        //     }
+
+        //     .cabeza__anun--cont_info.activo {
+        //         display: block;
+        //         transition: .5s all;
+        //     }
+
+        //     .cabeza__anun--cont_info-cont {
+        //         display: block;
+        //         width: 100%;
+        //         padding: 7vh 9vw 0;
+
+        //         .cabeza__anun--cont_info-cont_box {
+        //             width: 100%;
+        //             height: auto;
+        //             background-color: map-get($color, "blanco");
+        //             padding: 2.5vh 6.5vw;
+        //             margin: 0 0 5svh;
+        //             /*border-top: 0;
+        //             border-left: 1px;
+        //             border-right: 1px;
+        //             border-bottom: 1px;
+        //             border-style: outset;
+        //             border-color: map-get($color, "gris_07");*/
+        //             border: 1px groove map-get($color, "gris_14");
+        //             border-top: none;
+        //             border-radius: 3px;
+
+        //             h1 {
+        //                 font-family: $fnt_01;
+        //                 font-size: 0.85rem;
+        //                 font-weight: 600;
+        //                 color: map-get($color, "negro");
+        //                 text-align: left;
+        //             }
+
+        //             h2 {
+        //                 font-family: $fnt_01;
+        //                 font-size: 0.7rem;
+        //                 font-weight: normal;
+        //                 color: map-get($color, "gris_01");
+        //                 text-align: left;
+        //             }
+
+        //             p {
+        //                 font-family: $fnt_01;
+        //                 font-size: 0.7rem;
+        //                 font-weight: 600;
+        //                 color: map-get($color, "negro");
+        //                 text-align: right;
+        //                 margin-top: 5px;
+
+        //                 span {
+        //                     font-family: $fnt_01;
+        //                     font-size: 0.55rem;
+        //                     color: map-get($color, "negro");
+        //                     margin-left: 3px;
+        //                 }
+        //             }
+        //         }
+        //     }
+
+        // }
+
+        // .cabeza__anun--cont.activo {
+        //     right: 0;
+        // }
+        
 
         .cabecera__movil {
             @include caja__flexible--edit ($flx_bx_ff: row nowrap, $flx_bx_alit: center, $flx_bx_juco: space-between, $flx_bx_gap: 0px);
@@ -578,6 +906,8 @@
 
             .contenido__info--servicios {
                 background: map-get($color, "gris_18");
+                // height: 1192.06px;
+                // overflow: hidden;
 
                 .contenido__info--servicios_margensep {
                     height: 14px;
@@ -646,6 +976,9 @@
 
                     .info__servicios--cont_cont {
                         @include caja__flexible--edit ($flx_bx_ff: row wrap, $flx_bx_alit: flex-start, $flx_bx_juco: space-evenly, $flx_bx_gap: 0px);
+                        // height: 1042.38px;
+                        height: 150.63svh;
+                        overflow: hidden;
 
                         .info__servicios--cont_box {
                             display: inline-block;
@@ -817,6 +1150,8 @@
                 padding: 5svh 0 7svh;
                 margin: 1px 0 0;
                 background-color: map-get($color, "rojo_04");
+                height: 100.60svh;
+                overflow: hidden;
 
                 h3 {
                     font-family: $fam_01;

@@ -58,13 +58,13 @@ export default function animacionProyectos() {
 
             const totalRecorrido = 694
 
-            console.log('*** SUMA DE ALTURAS ***')
+            // console.log('*** SUMA DE ALTURAS ***')
 
-            console.log(sumaDeAlturas)            
+            // console.log(sumaDeAlturas)            
 
-            console.log('*** SCROLL ACTUAL ***')
+            // console.log('*** SCROLL ACTUAL ***')
 
-            console.log(scrollActual)
+            // console.log(scrollActual)
 
             
 

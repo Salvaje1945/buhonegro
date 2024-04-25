@@ -8,6 +8,8 @@ export default function animacionServicios() {
 
     const alturaNosotros = $('#contenido-nosotros').offsetHeight
 
+    const alturaNosotrosMargInf = 82
+
     // const sumaDeAlturasParaEncabezado = alturaCabecera + alturaCarrousel + alturaNosotros
 
     const alturaSeparadorTopServicios = $('#contenido-servicios-separador-top').offsetHeight
@@ -22,9 +24,33 @@ export default function animacionServicios() {
 
         window.addEventListener('scroll', function () {
 
-            const sumaDeAlturasParaEncabezado = alturaCabecera + alturaCarrousel + alturaNosotros
+            const sumaDeAlturasParaEncabezado = alturaCabecera + alturaCarrousel + alturaNosotros + alturaNosotrosMargInf
 
             // const sumaDeAlturasParaEncabezado = alturaCabecera + alturaCarrousel + (alturaNosotros / 100 * 80)
+
+            // console.log('*** ALTURA PARA ENCABEZADO ***')
+
+            // console.log(sumaDeAlturasParaEncabezado)
+
+            // console.log('******************************')
+
+            // console.log('*** ALTURA CABECERA ***')
+
+            // console.log(alturaCabecera)
+
+            // console.log('******************************')
+
+            // console.log('*** ALTURA CARROUSEL ***')
+
+            // console.log(alturaCarrousel)
+
+            // console.log('******************************')
+
+            // console.log('*** ALTURA NOSOTROS ***')
+
+            // console.log(alturaNosotros)
+
+            // console.log('******************************')
 
             const sumaDeAlturasParaFrontEnd = alturaCabecera + alturaCarrousel +  ((alturaNosotros / 4) * 3)
 
